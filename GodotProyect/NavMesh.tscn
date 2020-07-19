@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://NavMesh.gd" type="Script" id=1]
 [ext_resource path="res://habitacion-01.jpg" type="Texture" id=2]
 [ext_resource path="res://zackthezebra-02.png" type="Texture" id=3]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=4]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 896, 552, 960, 544, 960, 592, 40, 592, 40, 552, 120, 552, 128, 536, 352, 536, 352, 544, 720, 560, 744, 536, 832, 536, 848, 552, 712, 576, 672, 584, 432, 552, 592, 552 )
@@ -28,3 +29,5 @@ position = Vector2( 72, 568 )
 scale = Vector2( 0.114154, 0.114154 )
 texture = ExtResource( 3 )
 offset = Vector2( 70.0806, -1752.02 )
+
+[node name="GUI" parent="." instance=ExtResource( 4 )]
