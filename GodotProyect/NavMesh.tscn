@@ -1,17 +1,18 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://NavMesh.gd" type="Script" id=1]
 [ext_resource path="res://habitacion-01.jpg" type="Texture" id=2]
 [ext_resource path="res://zackthezebra-02.png" type="Texture" id=3]
 [ext_resource path="res://ShowInventory.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Item.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/GUI/Pilas.png" type="Texture" id=6]
-[ext_resource path="res://assets/GUI/PapelAluminio.png" type="Texture" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 896, 552, 960, 544, 960, 592, 40, 592, 40, 552, 120, 552, 128, 536, 352, 536, 352, 544, 720, 560, 744, 536, 832, 536, 848, 552, 712, 576, 672, 584, 432, 552, 592, 552 )
 polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5 ), PoolIntArray( 6, 7, 8, 5 ), PoolIntArray( 9, 10, 11, 12, 13 ), PoolIntArray( 13, 12, 0, 2, 14 ), PoolIntArray( 14, 3, 5, 8, 15 ), PoolIntArray( 15, 16, 14 ), PoolIntArray( 14, 2, 3 ) ]
 outlines = [ PoolVector2Array( 40, 592, 40, 552, 120, 552, 128, 536, 352, 536, 352, 544, 432, 552, 592, 552, 672, 584, 712, 576, 720, 560, 744, 536, 832, 536, 848, 552, 896, 552, 960, 544, 960, 592 ) ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 610.127, 1965.84 )
 
 [node name="Node" type="Node"]
 
@@ -22,11 +23,9 @@ texture = ExtResource( 2 )
 
 [node name="Item1" parent="." instance=ExtResource( 5 )]
 position = Vector2( 536, 240 )
-texture = ExtResource( 6 )
 
 [node name="Item2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 920, 352 )
-texture = ExtResource( 7 )
 
 [node name="NavMesh" type="Navigation2D" parent="."]
 script = ExtResource( 1 )
@@ -35,10 +34,18 @@ script = ExtResource( 1 )
 position = Vector2( 0, -144 )
 navpoly = SubResource( 1 )
 
-[node name="Character" type="Sprite" parent="NavMesh"]
+[node name="Character" type="Sprite" parent="NavMesh" groups=[
+"Player",
+]]
 position = Vector2( 96, 424 )
 scale = Vector2( 0.0917842, 0.0976682 )
 texture = ExtResource( 3 )
 offset = Vector2( 70.0806, -1752.02 )
+
+[node name="Area2D" type="Area2D" parent="NavMesh/Character"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavMesh/Character/Area2D"]
+position = Vector2( 0, -1638.2 )
+shape = SubResource( 2 )
 
 [node name="Inventario" parent="." instance=ExtResource( 4 )]
