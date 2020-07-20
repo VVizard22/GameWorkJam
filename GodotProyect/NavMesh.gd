@@ -7,7 +7,7 @@ var path = []
 
 #Check para ver si se presiona el click izquierdo
 func _input(event):
-	if Input.is_action_pressed("left_mouse_click"):
+	if Input.is_action_pressed("left_click"):
 		_update_navigation_path($Character.position, get_local_mouse_position())
 	
 

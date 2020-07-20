@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://InventoryManager.gd" type="Script" id=1]
+
+[node name="Inventario" type="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -152.0
+color = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = 16.0
+margin_right = -32.0
+margin_bottom = -16.0
+custom_constants/hseparation = 30
+columns = 9
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot1" type="TextureRect" parent="GridContainer"]
+
+[node name="Slot2" type="TextureRect" parent="GridContainer"]
+margin_left = 30.0
+margin_right = 30.0
+
+[node name="Slot3" type="TextureRect" parent="GridContainer"]
+margin_left = 60.0
+margin_right = 60.0
+
+[node name="Slot4" type="TextureRect" parent="GridContainer"]
+margin_left = 90.0
+margin_right = 90.0
+
+[node name="Slot5" type="TextureRect" parent="GridContainer"]
+margin_left = 120.0
+margin_right = 120.0
+
+[node name="Slot6" type="TextureRect" parent="GridContainer"]
+margin_left = 150.0
+margin_right = 150.0
+
+[node name="Slot7" type="TextureRect" parent="GridContainer"]
+margin_left = 180.0
+margin_right = 180.0
+
+[node name="Slot8" type="TextureRect" parent="GridContainer"]
+margin_left = 210.0
+margin_right = 210.0
+
+[node name="Slot9" type="TextureRect" parent="GridContainer"]
+margin_left = 240.0
+margin_right = 240.0
