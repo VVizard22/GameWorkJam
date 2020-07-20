@@ -3,11 +3,12 @@ extends Navigation2D
 #Velocidad del personaje
 export(float) var CHAR_SPEED = 400.0
 
+var canMoveToPos =  true
 var path = []
 
 #Check para ver si se presiona el click izquierdo
 func _input(event):
-	if Input.is_action_pressed("left_click"):
+	if Input.is_action_pressed("left_click") and canMoveToPos:
 		_update_navigation_path($Character.position, get_local_mouse_position())
 	
 
@@ -45,3 +46,11 @@ func move_along_path(distance):
 		distance -= distance_between_points
 		last_point = path[0]
 		path.remove(0)
+
+
+func _on_viewport() -> void:
+	canMoveToPos = true
+
+
+func _on_viewport_exited() -> void:
+	canMoveToPos = false

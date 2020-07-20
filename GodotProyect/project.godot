@@ -20,7 +20,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Inventario="*res://Inventario.gd"
+Inventario="*res://Scripts/Inventario.gd"
 
 [display]
 

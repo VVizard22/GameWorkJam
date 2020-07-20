@@ -1,12 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://InventoryManager.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/InventoryManager.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/DragDrop1.gd" type="Script" id=2]
 
 [node name="Inventario" type="ColorRect"]
-anchor_top = 1.0
+anchor_top = 0.747
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -152.0
+margin_top = -0.200012
 color = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -27,35 +28,44 @@ __meta__ = {
 }
 
 [node name="Slot1" type="TextureRect" parent="GridContainer"]
+script = ExtResource( 2 )
 
 [node name="Slot2" type="TextureRect" parent="GridContainer"]
 margin_left = 30.0
 margin_right = 30.0
+script = ExtResource( 2 )
 
 [node name="Slot3" type="TextureRect" parent="GridContainer"]
 margin_left = 60.0
 margin_right = 60.0
+script = ExtResource( 2 )
 
 [node name="Slot4" type="TextureRect" parent="GridContainer"]
 margin_left = 90.0
 margin_right = 90.0
+script = ExtResource( 2 )
 
 [node name="Slot5" type="TextureRect" parent="GridContainer"]
 margin_left = 120.0
 margin_right = 120.0
+script = ExtResource( 2 )
 
 [node name="Slot6" type="TextureRect" parent="GridContainer"]
 margin_left = 150.0
 margin_right = 150.0
+script = ExtResource( 2 )
 
 [node name="Slot7" type="TextureRect" parent="GridContainer"]
 margin_left = 180.0
 margin_right = 180.0
+script = ExtResource( 2 )
 
 [node name="Slot8" type="TextureRect" parent="GridContainer"]
 margin_left = 210.0
 margin_right = 210.0
+script = ExtResource( 2 )
 
 [node name="Slot9" type="TextureRect" parent="GridContainer"]
 margin_left = 240.0
 margin_right = 240.0
+script = ExtResource( 2 )
