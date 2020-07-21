@@ -3,6 +3,8 @@ extends Area2D
 onready var nombre = self.get_parent().name
 onready var textura = self.get_parent().texture
 
+export(String) var description
+
 var clicked = false
 var hover = false
 

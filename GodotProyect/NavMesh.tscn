@@ -26,15 +26,21 @@ position = Vector2( 511, 222.464 )
 scale = Vector2( 0.146571, 0.123042 )
 texture = ExtResource( 2 )
 
-[node name="Item1" parent="." instance=ExtResource( 5 )]
+[node name="Pilas AAA" parent="." instance=ExtResource( 5 )]
 position = Vector2( 536, 272 )
 scale = Vector2( 0.375, 0.375 )
 texture = ExtResource( 6 )
 
-[node name="Item2" parent="." instance=ExtResource( 5 )]
+[node name="Area2D" parent="Pilas AAA" index="0"]
+description = "Mmh, parecen unas pilas AAA"
+
+[node name="Aluminio" parent="." instance=ExtResource( 5 )]
 position = Vector2( 920, 384 )
 scale = Vector2( 0.375, 0.375 )
 texture = ExtResource( 7 )
+
+[node name="Area2D" parent="Aluminio" index="0"]
+description = "Un poco de papel aluminio, buen conductor de energía"
 
 [node name="NavMesh" type="Navigation2D" parent="."]
 script = ExtResource( 1 )
@@ -66,3 +72,7 @@ shape = SubResource( 3 )
 [node name="Inventario" parent="." instance=ExtResource( 4 )]
 [connection signal="mouse_entered" from="NavMesh/Area2D" to="NavMesh" method="_on_viewport"]
 [connection signal="mouse_exited" from="NavMesh/Area2D" to="NavMesh" method="_on_viewport_exited"]
+
+[editable path="Pilas AAA"]
+
+[editable path="Aluminio"]
