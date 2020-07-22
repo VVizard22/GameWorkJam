@@ -1,6 +1,13 @@
 extends GridContainer
 
 onready var slots = self.get_children()
+var hover = false
+
+func _on_Area2D_mouse_entered():
+	hover = true
+
+func _on_Area2D_mouse_exited():
+	hover = false
 
 func _ready():
 	Inventario.connect("nuevoInventario", self, "_on_nuevoInventario")
@@ -17,4 +24,3 @@ func _on_combineItems():
 		if Inventario.inventario.keys().find(item) == -1:
 			item.name = "Slot"
 			item.texture = null
-

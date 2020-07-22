@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PapelAluminio.png-b226539a3fac193f90b6f811c1b11e8f.stex"
+path="res://.import/PapelAluminio.png-71b7f9fda1c3927d231a245c593ed867.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/PapelAluminio.png"
-dest_files=[ "res://.import/PapelAluminio.png-b226539a3fac193f90b6f811c1b11e8f.stex" ]
+source_file="res://PapelAluminio.png"
+dest_files=[ "res://.import/PapelAluminio.png-71b7f9fda1c3927d231a245c593ed867.stex" ]
 
 [params]
 
