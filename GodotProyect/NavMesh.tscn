@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/NavMesh.gd" type="Script" id=1]
 [ext_resource path="res://habitacion-01.jpg" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Item.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Pilas.png" type="Texture" id=6]
 [ext_resource path="res://PapelAluminio.png" type="Texture" id=7]
+[ext_resource path="res://Hablado.gd" type="Script" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 896, 552, 960, 544, 960, 592, 40, 592, 40, 552, 120, 552, 128, 536, 352, 536, 352, 544, 720, 560, 744, 536, 832, 536, 848, 552, 712, 576, 672, 584, 432, 552, 592, 552 )
@@ -68,6 +69,16 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavMesh/Area2D"]
 position = Vector2( 512, 224 )
 shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="NavMesh"]
+margin_left = 177.0
+margin_top = 78.0
+margin_right = 302.0
+margin_bottom = 127.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Inventario" parent="." instance=ExtResource( 4 )]
 [connection signal="mouse_entered" from="NavMesh/Area2D" to="NavMesh" method="_on_viewport"]

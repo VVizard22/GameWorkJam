@@ -25,3 +25,5 @@ func _process(delta):
 func _input(event):
 	if hover and event.is_action_pressed("left_click"):
 		clicked = true
+	if hover and event.is_action_pressed("right_click"):
+		Dialogo.get_topic(get_parent().name)

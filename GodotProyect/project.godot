@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Inventario="*res://Scripts/Inventario.gd"
+Dialogo="*res://Scripts/Dialogo.gd"
 
 [display]
 
