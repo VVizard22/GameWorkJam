@@ -4,7 +4,18 @@ func _ready():
 	pass # Replace with function body.
 
 signal topico
-var descripcion = {"Pilas AAA": "Parecen pilas AAA", "Aluminio": "Me pregunto que podre hacer con papel metalico"}
+var descripcion = {"Linterna": "",
+					"Pilas AAA": "Parecen pilas AAA",
+					"Aluminio": "Me pregunto que podre hacer con papel metalico",
+					"Pilas AA": "",
+					"Libro": "",
+					"Escultura": "",
+					"Cuadro": "",
+					"Puerta": "",
+					"Panel Codigo": "",
+					"Biblioteca": "",
+					"Compartimiento": "",
+					"Cuerda": ""}
 
 func get_topic(topic):
 	for t in descripcion:
