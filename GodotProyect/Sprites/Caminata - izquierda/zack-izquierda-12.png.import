@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/zack-izquierda-07.png-7fb32c4f5eaa0b674a107476d73b4c8f.stex"
+path="res://.import/zack-izquierda-12.png-71cc0d0c5759c2b7bd7927d86be04b0f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Caminata - izquierda/zack-izquierda-07.png"
-dest_files=[ "res://.import/zack-izquierda-07.png-7fb32c4f5eaa0b674a107476d73b4c8f.stex" ]
+source_file="res://Sprites/Caminata - izquierda/zack-izquierda-12.png"
+dest_files=[ "res://.import/zack-izquierda-12.png-71cc0d0c5759c2b7bd7927d86be04b0f.stex" ]
 
 [params]
 

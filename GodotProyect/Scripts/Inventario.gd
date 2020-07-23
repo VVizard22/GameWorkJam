@@ -31,5 +31,5 @@ func Combine(item1, item2):
 			inventario.erase(item2)
 			emit_signal("combineItems")
 			
-			added_item(resultados[s], ResourceLoader.load("res://"+ resultados[s]+ ".png"))
+			added_item(resultados[s], ResourceLoader.load("res://Sprites/"+ resultados[s]+ ".png"))
 			

@@ -16,8 +16,8 @@ _global_script_class_icons={
 [application]
 
 config/name="GameWorkJam"
-run/main_scene="res://NavMesh.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/NavMesh.tscn"
+config/icon="res://Sprites/icon.png"
 
 [autoload]
 

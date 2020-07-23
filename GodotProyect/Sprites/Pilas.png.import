@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/habitacion-01.jpg-6586ebef5ce996a06aa8838a9b4c2ad8.stex"
+path="res://.import/Pilas.png-84678b77c842e5a2706569eab043275e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://habitacion-01.jpg"
-dest_files=[ "res://.import/habitacion-01.jpg-6586ebef5ce996a06aa8838a9b4c2ad8.stex" ]
+source_file="res://Sprites/Pilas.png"
+dest_files=[ "res://.import/Pilas.png-84678b77c842e5a2706569eab043275e.stex" ]
 
 [params]
 
