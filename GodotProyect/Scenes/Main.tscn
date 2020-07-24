@@ -1,0 +1,58 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Objetos/escultura.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Objetos/cuadro.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Objetos/habitacion.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Objetos/biblioteca.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Objetos/cajonera.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Objetos/linterna.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Objetos/libro.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Objetos/panel.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Objetos/puerta.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/ShowInventory.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Typewriter_effect.tscn" type="PackedScene" id=13]
+
+[node name="Main" type="Node"]
+
+[node name="habitacion" type="Sprite" parent="."]
+position = Vector2( 903.25, 385.014 )
+texture = ExtResource( 4 )
+
+[node name="Items" type="Node" parent="."]
+
+[node name="Biblioteca" parent="Items" instance=ExtResource( 1 )]
+position = Vector2( 1174.53, 365.932 )
+texture = ExtResource( 5 )
+
+[node name="Cajonera" parent="Items" instance=ExtResource( 1 )]
+position = Vector2( 436.421, 416.901 )
+texture = ExtResource( 6 )
+
+[node name="Escultura" parent="Items" instance=ExtResource( 1 )]
+position = Vector2( 1427.49, 409.35 )
+texture = ExtResource( 2 )
+
+[node name="Cuadro" parent="Items" instance=ExtResource( 1 )]
+position = Vector2( 753.563, 350.83 )
+texture = ExtResource( 3 )
+
+[node name="Linterna" parent="Items" instance=ExtResource( 1 )]
+position = Vector2( 433.534, 528.503 )
+texture = ExtResource( 7 )
+
+[node name="Libro" parent="Items" instance=ExtResource( 1 )]
+position = Vector2( 1022.59, 635.939 )
+texture = ExtResource( 8 )
+
+[node name="Puerta" parent="Items" instance=ExtResource( 1 )]
+position = Vector2( 1715.71, 357.979 )
+texture = ExtResource( 10 )
+
+[node name="Panel" parent="Items" instance=ExtResource( 1 )]
+position = Vector2( 1637.31, 311.652 )
+texture = ExtResource( 9 )
+
+[node name="Inventario" parent="." instance=ExtResource( 12 )]
+
+[node name="Typewriter_effect" parent="." instance=ExtResource( 13 )]

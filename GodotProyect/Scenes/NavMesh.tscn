@@ -1,13 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/NavMesh.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/habitacion-01.jpg" type="Texture" id=2]
 [ext_resource path="res://Sprites/zackthezebra-02.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/ShowInventory.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sprites/Pilas.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/PapelAluminio.png" type="Texture" id=7]
-[ext_resource path="res://Scripts/Hablado.gd" type="Script" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 896, 552, 960, 544, 960, 592, 40, 592, 40, 552, 120, 552, 128, 536, 352, 536, 352, 544, 720, 560, 744, 536, 832, 536, 848, 552, 712, 576, 672, 584, 432, 552, 592, 552 )
@@ -20,28 +14,7 @@ extents = Vector2( 610.127, 1965.84 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 520, 232 )
 
-[node name="Node" type="Node"]
-
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( 511, 222.464 )
-scale = Vector2( 0.146571, 0.123042 )
-texture = ExtResource( 2 )
-
-[node name="Pilas AAA" parent="." instance=ExtResource( 5 )]
-position = Vector2( 536, 272 )
-scale = Vector2( 0.375, 0.375 )
-texture = ExtResource( 6 )
-
-[node name="Area2D" parent="Pilas AAA" index="0"]
-description = "Mmh, parecen unas pilas AAA"
-
-[node name="Aluminio" parent="." instance=ExtResource( 5 )]
-position = Vector2( 920, 384 )
-scale = Vector2( 0.375, 0.375 )
-texture = ExtResource( 7 )
-
-[node name="Area2D" parent="Aluminio" index="0"]
-description = "Un poco de papel aluminio, buen conductor de energía"
+[node name="Character" type="Node"]
 
 [node name="NavMesh" type="Navigation2D" parent="."]
 script = ExtResource( 1 )
@@ -69,21 +42,5 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavMesh/Area2D"]
 position = Vector2( 512, 224 )
 shape = SubResource( 3 )
-
-[node name="Label" type="Label" parent="NavMesh"]
-margin_left = 177.0
-margin_top = 78.0
-margin_right = 302.0
-margin_bottom = 127.0
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Inventario" parent="." instance=ExtResource( 4 )]
 [connection signal="mouse_entered" from="NavMesh/Area2D" to="NavMesh" method="_on_viewport"]
 [connection signal="mouse_exited" from="NavMesh/Area2D" to="NavMesh" method="_on_viewport_exited"]
-
-[editable path="Pilas AAA"]
-
-[editable path="Aluminio"]

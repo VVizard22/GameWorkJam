@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Hablado.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.164706 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Typewriter_text_effect"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texto:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="Typewriter_effect" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1023.0
+margin_bottom = 50.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="Panel"]
+anchor_left = 0.09
+anchor_top = 0.587
+anchor_right = 0.941
+anchor_bottom = 1.127
+margin_left = 6.66479
+margin_top = -22.4302
+margin_right = 7.09174
+margin_bottom = -18.4303
+text = "ADSADSADSADSADas
+"
+autowrap = true
+percent_visible = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Efecto" type="AnimationPlayer" parent="Panel"]
+anims/Typewriter_text_effect = SubResource( 2 )
