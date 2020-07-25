@@ -2,7 +2,7 @@ extends AnimatedSprite
 
 
 var currentState
-var lastPosTimer = 3
+var lastPosTimer = 1
 var lastPos
 var finalPos
 
@@ -13,18 +13,19 @@ func _ready():
 
 func _process(delta):
 	animation = currentState
+	if lastPosTimer >= 1:
+		if lastPos == self.position:
+			finalPos = self.position
+		lastPos = self.position
+		lastPosTimer = 0
+	
 	if self.position.x - finalPos.x  > 10:
 		currentState = "WalkingLeft"
 	if self.position.x - finalPos.x  < 10 and self.position.x - finalPos.x > -10:
 		currentState = "Idle"
 	if self.position.x - finalPos.x < -10:
 		currentState = "WalkingRight"
-		
-	if lastPosTimer >= 3:
-		if lastPos == self.position:
-			finalPos = self.position
-		lastPos = self.position
-		lastPosTimer = 0
+	
 	lastPosTimer += 1
 
 func _input(event):

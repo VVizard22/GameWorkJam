@@ -15,7 +15,7 @@
 [ext_resource path="res://Sprites/Caminata - izquierda/zack-izquierda-13.png" type="Texture" id=13]
 [ext_resource path="res://Sprites/Caminata - izquierda/zack-izquierda-09.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Caminata - izquierda/zack-izquierda-07.png" type="Texture" id=15]
-[ext_resource path="res://Scenes/PlayerAnimation.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/PlayerAnimation.gd" type="Script" id=16]
 [ext_resource path="res://Sprites/Caminata - derecha/zack-derecha-11.png" type="Texture" id=17]
 [ext_resource path="res://Sprites/Caminata - derecha/zack-derecha-14.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/Caminata - derecha/zack-derecha-13.png" type="Texture" id=19]
@@ -30,6 +30,7 @@
 [ext_resource path="res://Sprites/Caminata - derecha/zack-derecha-05.png" type="Texture" id=28]
 [ext_resource path="res://Sprites/Caminata - derecha/zack-derecha-10.png" type="Texture" id=29]
 [ext_resource path="res://Sprites/Caminata - derecha/zack-derecha-08.png" type="Texture" id=30]
+
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
