@@ -7,7 +7,7 @@ bg_color = Color( 0, 0, 0, 0.164706 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Typewriter_text_effect"
-length = 1.5
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Texto:percent_visible")
 tracks/0/interp = 1
@@ -15,7 +15,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
@@ -24,8 +24,8 @@ tracks/0/keys = {
 [node name="Typewriter_effect" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
-margin_right = 1023.0
-margin_bottom = 50.0
+margin_right = 1816.0
+margin_bottom = 64.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

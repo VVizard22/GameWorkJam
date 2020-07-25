@@ -1,14 +1,15 @@
-extends Navigation2D
+ extends Navigation2D
 
 #Velocidad del personaje
-export(float) var CHAR_SPEED = 400.0
-
+var charMove
 var canMoveToPos =  true
 var path = []
 
+
+
 #Check para ver si se presiona el click izquierdo
 func _input(event):
-	if Input.is_action_pressed("left_click") and canMoveToPos:
+	if event.is_action_pressed("left_click") and canMoveToPos:
 		_update_navigation_path($Character.position, get_local_mouse_position())
 	
 
@@ -24,7 +25,8 @@ func _update_navigation_path(start_pos, end_pos):
 
 #Settea la velocidad del personaje
 func _process(delta):
-	var walk_distance = CHAR_SPEED * delta
+	charMove = Inventario.charSpeed
+	var walk_distance = charMove * delta
 	move_along_path(walk_distance)
 
 
@@ -32,6 +34,7 @@ func _process(delta):
 func move_along_path(distance):
 	#Toma como punto de inicio la posición del personaje
 	var last_point = $Character.position
+	
 	
 	#Itera por cada punto del camino creado anteriormente, 
 	for index in range(path.size()):

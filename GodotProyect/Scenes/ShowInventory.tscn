@@ -69,3 +69,21 @@ script = ExtResource( 2 )
 margin_left = 240.0
 margin_right = 240.0
 script = ExtResource( 2 )
+[connection signal="mouse_entered" from="GridContainer/Slot1" to="GridContainer/Slot1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot1" to="GridContainer/Slot1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Slot2" to="GridContainer/Slot2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot2" to="GridContainer/Slot2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Slot3" to="GridContainer/Slot3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot3" to="GridContainer/Slot3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Slot4" to="GridContainer/Slot4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot4" to="GridContainer/Slot4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Slot5" to="GridContainer/Slot5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot5" to="GridContainer/Slot5" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Slot6" to="GridContainer/Slot6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot6" to="GridContainer/Slot6" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Slot7" to="GridContainer/Slot7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot7" to="GridContainer/Slot7" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Slot8" to="GridContainer/Slot8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot8" to="GridContainer/Slot8" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Slot9" to="GridContainer/Slot9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Slot9" to="GridContainer/Slot9" method="_on_mouse_exited"]

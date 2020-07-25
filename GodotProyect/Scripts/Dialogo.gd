@@ -8,17 +8,17 @@ var descripcion = {"Linterna": "",
 					"Pilas AAA": "Parecen pilas AAA",
 					"Aluminio": "Me pregunto que podre hacer con papel metalico",
 					"Pilas AA": "",
-					"Libro": "",
+					"Libro": "Mmmmmmmmmmmh, el libro del famoso Capitán Colmillo",
 					"Escultura": "",
 					"Cuadro": "",
 					"Puerta": "",
 					"Panel Codigo": "",
 					"Biblioteca": "",
 					"Compartimiento": "",
-					"Cuerda": ""}
+					"Cuerda": "",
+					"NoCombina": "No creo que esos dos vayan juntos"}
 
 func get_topic(topic):
 	for t in descripcion:
-		print_debug(topic + "anda" + t)
 		if topic == t:
 			emit_signal("topico", topic)
