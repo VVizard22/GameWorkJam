@@ -1,9 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Hablado.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/rm_typerighter.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.164706 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Typewriter_text_effect"
@@ -32,16 +37,16 @@ __meta__ = {
 }
 
 [node name="Texto" type="Label" parent="Panel"]
-anchor_left = 0.09
-anchor_top = 0.587
-anchor_right = 0.941
-anchor_bottom = 1.127
-margin_left = 6.66479
-margin_top = -22.4302
-margin_right = 7.09174
-margin_bottom = -18.4303
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -773.0
+margin_right = 773.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 3 )
 text = "ADSADSADSADSADas
 "
+align = 1
+valign = 1
 autowrap = true
 percent_visible = 0.0
 script = ExtResource( 1 )
