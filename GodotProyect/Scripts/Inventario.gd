@@ -3,6 +3,7 @@ extends Node
 signal nuevoInventario
 signal combineItems
 
+var onViewport = false
 var charSpeed = 400
 
 var currentlyUsing = ""

@@ -12,6 +12,9 @@ func _input(event):
 	if event.is_action_pressed("left_click") and canMoveToPos:
 		_update_navigation_path($Character.position, get_local_mouse_position())
 	
+	if event.is_action_released("left_click") and canMoveToPos and Inventario.currentlyUsing != "":
+		_update_navigation_path($Character.position, get_local_mouse_position())
+	
 
 
 func _update_navigation_path(start_pos, end_pos):
@@ -53,7 +56,9 @@ func move_along_path(distance):
 
 func _on_viewport() -> void:
 	canMoveToPos = true
+	Inventario.onViewport = true
 
 
 func _on_viewport_exited() -> void:
 	canMoveToPos = false
+	Inventario.onViewport = false

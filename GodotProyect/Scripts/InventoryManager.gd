@@ -16,8 +16,8 @@ func _ready():
 func _on_nuevoInventario():
 	for key in Inventario.inventario:
 		var useSlot = Inventario.inventario.keys().find(key)
-		slots[useSlot].name = key
-		slots[useSlot].texture = Inventario.inventario[key]
+		slots[useSlot].get_child(0).get_child(0).name = key
+		slots[useSlot].get_child(0).get_child(0).texture = Inventario.inventario[key]
 
 func _on_combineItems():
 	for item in slots:

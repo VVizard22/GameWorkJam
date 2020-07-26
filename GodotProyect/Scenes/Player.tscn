@@ -31,8 +31,7 @@
 [ext_resource path="res://Sprites/Caminata - derecha/zack-derecha-10.png" type="Texture" id=29]
 [ext_resource path="res://Sprites/Caminata - derecha/zack-derecha-08.png" type="Texture" id=30]
 
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
@@ -50,14 +49,14 @@ animations = [ {
 "speed": 14.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 782.609, 2285.71 )
 
 [node name="Character" type="AnimatedSprite" groups=[
 "Player",
 ]]
 position = Vector2( 8, 224 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "Idle"
 playing = true
 offset = Vector2( -8, -224 )
@@ -69,4 +68,4 @@ scale = Vector2( 0.092, 0.098 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, -2122.45 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )

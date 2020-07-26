@@ -19,6 +19,7 @@ func _process(delta):
 		lastPos = self.position
 		lastPosTimer = 0
 	
+	
 	if self.position.x - finalPos.x  > 10:
 		currentState = "WalkingLeft"
 	if self.position.x - finalPos.x  < 10 and self.position.x - finalPos.x > -10:
@@ -29,5 +30,10 @@ func _process(delta):
 	lastPosTimer += 1
 
 func _input(event):
-	if event.is_action_pressed("left_click"):
-		finalPos = get_global_mouse_position()
+	if Inventario.currentlyUsing != "":
+		if event.is_action_released("left_click"):
+			finalPos = get_global_mouse_position()
+			print_debug(str(finalPos))
+	else:
+		if event.is_action_pressed("left_click") and Inventario.onViewport:
+			finalPos = get_global_mouse_position()

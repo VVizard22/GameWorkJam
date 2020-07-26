@@ -2,6 +2,9 @@ extends TextureRect
 
 var hover
 
+func _process(delta):
+	pass
+
 func get_drag_data(_pos):
 	# Use another colorpicker as drag preview
 	var preview = TextureRect.new()
