@@ -4,32 +4,33 @@ signal topico
 signal phrase
 
 var random = ["1","2","3","4"]
-var descripcion = {	"Linterna": "Una linterna con luz ultravioleta, pero necesita unas pilas AA para funcionar",
-					"Pilas AAA": "Unas simples pilas AAA",
-					"Aluminio": "Me pregunto que podre hacer con papel metalico",
-					"Pilas AA": "Como las AAA, solo que un poco mas grandes",
+var descripcion = {	"Linterna": "Una linterna con luz ultravioleta, pero necesita unas pilas AA para funcionar.",
+					"Pilas AAA": "Unas simples pilas AAA.",
+					"Aluminio": "Me pregunto que podre hacer con papel metalico.",
+					"Pilas AA": "Como las AAA, solo que un poco mas grandes.",
 					
-					"Libro": "Teoría del colór, tomo 8, un libro muy interesante... mentira, nunca lo leí",
-					"Biblioteca": "Una biblioteca con libros de teoría del arte y grandes artistas",
+					"Libro": "Teoría del colór, tomo 8, un libro muy interesante... mentira, nunca lo leí.",
+					"Biblioteca": "Una biblioteca con libros de teoría del arte y grandes artistas.",
 					"Compartimiento": "La biblioteca tenía un compartimiento secreto, que será tan privado que este señor tenga que protejer?",
 					
-					"Cuadro": "'La Mona Lisa', muy buen cuadro debo admitir, aunque de un poco de miedo ya que parece que siempre me esta mirando",
+					"Cuadro": "'La Mona Lisa', muy buen cuadro debo admitir, aunque de un poco de miedo ya que parece que siempre me esta mirando.",
 					
-					"Puerta": "Si tengo que ver algo en ella, no lo entiendo... es una simple puerta",
-					"PuertaCerrada": "Está cerrada, y eso que no tiene ningún cerrojo",
-					"Panel": "Es un panel electronico que requiere un código... tal vez abra la puerta",
+					"Puerta": "Si tengo que ver algo en ella, no lo entiendo... es una simple puerta.",
+					"PuertaCerrada": "Está cerrada, y eso que no tiene ningún cerrojo.",
+					"Panel": "Es un panel electronico que requiere un código... tal vez abra la puerta.",
 					
-					"Escultura": "El artista que la está trabajando es realmente talentoso, una pena que deba arrestarlo por intentar raptarme",
-					"Cincel": "Unas herramientas típicas de trabajo para un escultor, pero tambien son útiles para tecnicas de detective",
+					"Escultura": "El artista que la está trabajando es realmente talentoso, una pena que deba arrestarlo por intentar raptarme.",
+					"Cincel": "Unas herramientas típicas de trabajo para un escultor, pero tambien son útiles para tecnicas de detective.",
 					
-					"Anotaciones": "Son las anotaciones del artista... pero hay una página marcada",
+					"Anotaciones": "Son las anotaciones del artista... pero hay una página marcada.",
 					
 					"Cuerda": "",
 					
-					"Cajonera": "No hay nada muy interesante en los cajones... pero el ultimo parece necesitar una llave",
-					"AbrirCajon": "Ese último cajón enía una linterna, pero requiere unas pilas AA para funcionar",
+					"Cajonera": "No hay nada muy interesante en los cajones... pero el ultimo está cerrado.",
+					"AbrirCajon": "Ese último cajón enía una linterna, pero requiere unas pilas AA para funcionar.",
 					
-					"NoCombina": "No creo que esos dos vayan juntos"}
+					"NoCombina": "No creo que esos dos vayan juntos."}
+
 
 func get_topic(topic):
 	for t in descripcion:
@@ -37,5 +38,5 @@ func get_topic(topic):
 			emit_signal("topico", topic)
 
 func rand_phrase():
-	var rand = randi()%3
+	var rand = randi()%4
 	emit_signal("phrase", rand)
