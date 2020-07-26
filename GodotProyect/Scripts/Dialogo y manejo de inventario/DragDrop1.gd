@@ -39,6 +39,9 @@ func _on_mouse_exited():
 func _input(event):
 	if hover and event.is_action_pressed("right_click"):
 		Dialogo.get_topic(name)
+		if name == "Anotaciones":
+			pass
+			#Añadir página marcada que lleve a escena donde solo se ve la página
 	
 	elif hover and event.is_action_pressed("left_click"):
 		Inventario.currentlyUsing = name

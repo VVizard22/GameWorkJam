@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PilasAAA.png-a6c98cb461cc9389f1e6f19b04ee70da.stex"
+path="res://.import/Pilas AA.png-6a5d10732d6bdabdeed42a782fb23ae8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/PilasAAA.png"
-dest_files=[ "res://.import/PilasAAA.png-a6c98cb461cc9389f1e6f19b04ee70da.stex" ]
+source_file="res://Sprites/Objetos/Pilas AA.png"
+dest_files=[ "res://.import/Pilas AA.png-6a5d10732d6bdabdeed42a782fb23ae8.stex" ]
 
 [params]
 

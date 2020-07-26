@@ -36,12 +36,10 @@
 [ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-2.png" type="Texture" id=34]
 [ext_resource path="res://Scripts/Muebles Interactuable/Biblioteca.tres.gd" type="Script" id=35]
 [ext_resource path="res://Scripts/Muebles Interactuable/Cajonera.tres.gd" type="Script" id=36]
+[ext_resource path="res://Scripts/Puerta.tres.gd" type="Script" id=37]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.41, 19.939 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 44.29, 301.979 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 128, 104 )
@@ -51,15 +49,15 @@ extents = Vector2( 63.7164, 65.6997 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 27 ), ExtResource( 34 ), ExtResource( 20 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 29 ) ],
-"loop": false,
-"name": "Compartimiento",
-"speed": 14.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 34 ), ExtResource( 20 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "Compartimiento",
+"speed": 14.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=6]
@@ -85,13 +83,6 @@ texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" parent="Items/Libro/Area2D" index="0"]
 shape = SubResource( 1 )
-
-[node name="Puerta" parent="Items" instance=ExtResource( 1 )]
-position = Vector2( 1715.71, 357.979 )
-texture = ExtResource( 10 )
-
-[node name="CollisionShape2D" parent="Items/Puerta/Area2D" index="0"]
-shape = SubResource( 2 )
 
 [node name="Cajonera" parent="Items" instance=ExtResource( 11 )]
 position = Vector2( 456, 416 )
@@ -154,6 +145,23 @@ texture = ExtResource( 16 )
 texture_scale = 2.46
 script = ExtResource( 17 )
 
+[node name="Puerta" type="Sprite" parent="Items"]
+position = Vector2( 1715.71, 358.979 )
+texture = ExtResource( 10 )
+
+[node name="Area2D" type="Area2D" parent="Items/Puerta"]
+script = ExtResource( 37 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Puerta/Area2D"]
+scale = Vector2( 4.319, 33.159 )
+shape = SubResource( 6 )
+
+[node name="Light2D" type="Light2D" parent="Items/Puerta"]
+enabled = false
+texture = ExtResource( 16 )
+texture_scale = 2.46
+script = ExtResource( 17 )
+
 [node name="Escultura" type="Sprite" parent="Items"]
 position = Vector2( 1427.49, 409.35 )
 texture = ExtResource( 2 )
@@ -187,12 +195,12 @@ position = Vector2( 216, 600 )
 [connection signal="mouse_exited" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Items/Panel/Area2D" to="Items/Panel/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Items/Panel/Area2D" to="Items/Panel/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Items/Puerta/Area2D" to="Items/Puerta/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Items/Puerta/Area2D" to="Items/Puerta/Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Items/Escultura/Area2D" to="Items/Escultura/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Items/Escultura/Area2D" to="Items/Escultura/Area2D" method="_on_mouse_exited"]
 
 [editable path="Items/Libro"]
-
-[editable path="Items/Puerta"]
 
 [editable path="Items/Cajonera"]
 

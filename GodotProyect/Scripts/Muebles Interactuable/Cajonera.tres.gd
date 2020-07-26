@@ -10,7 +10,9 @@ func _process(delta):
 		var areas = self.get_overlapping_areas()
 		for s in areas:
 			if s.get_parent().is_in_group("Player"):
-				Inventario.Remove(neededItem)
+				Inventario.durabCincel -= 1
+				if Inventario.durabCincel == 0:
+					Inventario.Remove(neededItem)
 				Inventario.added_item("Linterna", ResourceLoader.load("res://Sprites/Objetos/Linterna.png"))
 				Dialogo.get_topic("AbrirCajon")
 				active = false

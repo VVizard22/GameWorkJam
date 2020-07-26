@@ -12,7 +12,7 @@ func _process(delta):
 			if s.get_parent().is_in_group("Player"):
 				self.get_parent().animation = "Compartimiento"
 				Inventario.Remove(neededItem)
-				Inventario.added_item("PilasAAA", ResourceLoader.load("res://Sprites/Objetos/PilasAAA.png"))
+				Inventario.added_item("Pilas AAA", ResourceLoader.load("res://Sprites/Objetos/Pilas AAA.png"))
 				Inventario.added_item("Anotaciones", ResourceLoader.load("res://Sprites/Objetos/Anotaciones.png"))
 				Dialogo.get_topic("Compartimiento")
 				active = false

@@ -6,11 +6,13 @@ signal combineItems
 var onViewport = false
 var charSpeed = 400
 
+
+var durabCincel = 2
 var currentlyUsing = ""
 
 var inventario = {}
 
-var resultados = {"Pilas AAAAluminio": "PilasAA", "PilasAALinterna": "Linterna Cargada"}
+var resultados = {"Pilas AAAAluminio": "Pilas AA", "Pilas AALinterna": "Linterna Cargada"}
 
 
 func _process(delta):
