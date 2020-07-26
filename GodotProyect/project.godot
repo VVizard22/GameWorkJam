@@ -21,8 +21,8 @@ config/icon="res://Sprites/icon.png"
 
 [autoload]
 
-Inventario="*res://Scripts/Inventario.gd"
-Dialogo="*res://Scripts/Dialogo.gd"
+Inventario="*res://Scripts/Dialogo y manejo de inventario/Inventario.gd"
+Dialogo="*res://Scripts/Dialogo y manejo de inventario/Dialogo.gd"
 
 [display]
 

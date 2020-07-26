@@ -33,7 +33,6 @@ func _input(event):
 	if Inventario.currentlyUsing != "":
 		if event.is_action_released("left_click"):
 			finalPos = get_global_mouse_position()
-			print_debug(str(finalPos))
 	else:
 		if event.is_action_pressed("left_click") and Inventario.onViewport:
 			finalPos = get_global_mouse_position()

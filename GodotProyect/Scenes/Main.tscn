@@ -1,42 +1,72 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/Objetos/escultura.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Objetos/cuadro.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Objetos/Escultura.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Objetos/Cuadro.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Objetos/habitacion.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Objetos/biblioteca.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Objetos/cajonera.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Objetos/libro.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Objetos/panel.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Objetos/puerta.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Objetos/Biblioteca.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Objetos/Cajonera.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Muebles Interactuable/Panel.gd" type="Script" id=7]
+[ext_resource path="res://Sprites/Objetos/Libro.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Objetos/Panel.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Objetos/Puerta.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Interactable.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/ShowInventory.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Typewriter_effect.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/NavMesh.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Sprites/Light.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/Pista.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/Muebles Interactuable/Escultura.gd" type="Script" id=18]
+[ext_resource path="res://Scripts/Muebles Interactuable/Cuadro.tres.gd" type="Script" id=19]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-3.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-6.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-10.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-7.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-9.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-11.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-12.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-1.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-5.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-15.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-4.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-14.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-13.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-8.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Objetos/Animacion-apertura compartimento/compartimento-2.png" type="Texture" id=34]
+[ext_resource path="res://Scripts/Muebles Interactuable/Biblioteca.tres.gd" type="Script" id=35]
+[ext_resource path="res://Scripts/Muebles Interactuable/Cajonera.tres.gd" type="Script" id=36]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 40, 88 )
-
-[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 49.41, 19.939 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 44.29, 301.979 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 26.6899, 39.652 )
-
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 128, 104 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 63.7164, 65.6997 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 192, 119 )
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 34 ), ExtResource( 20 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "Compartimiento",
+"speed": 14.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
 
-[sub_resource type="NavigationPolygon" id=10]
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="RectangleShape2D" id=7]
+
+[sub_resource type="NavigationPolygon" id=8]
 vertices = PoolVector2Array( 1496, 552, 1600, 544, 1768, 760, 64, 768, 1344, 568, 64, 512, 272, 512, 304, 576, 704, 584, 1528, 544, 992, 568 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 3, 5, 6, 7 ), PoolIntArray( 3, 7, 8 ), PoolIntArray( 0, 9, 1 ), PoolIntArray( 4, 3, 8, 10 ) ]
 outlines = [ PoolVector2Array( 64, 512, 272, 512, 304, 576, 704, 584, 992, 568, 1344, 568, 1496, 552, 1528, 544, 1600, 544, 1768, 760, 64, 768 ) ]
@@ -49,77 +79,103 @@ texture = ExtResource( 4 )
 
 [node name="Items" type="Node" parent="."]
 
-[node name="Escultura" parent="Items" instance=ExtResource( 1 )]
-position = Vector2( 1427.49, 409.35 )
-texture = ExtResource( 2 )
-
-[node name="Area2D" parent="Items/Escultura" index="0"]
-position = Vector2( 4.51001, -25.35 )
-
-[node name="CollisionShape2D" parent="Items/Escultura/Area2D" index="0"]
-shape = SubResource( 1 )
-
-[node name="Pista" parent="Items/Escultura" index="1"]
-position = Vector2( 12.83, -21.35 )
-scale = Vector2( 1.11382, 2.18496 )
-
 [node name="Libro" parent="Items" instance=ExtResource( 1 )]
 position = Vector2( 1032, 608 )
 texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" parent="Items/Libro/Area2D" index="0"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Puerta" parent="Items" instance=ExtResource( 1 )]
 position = Vector2( 1715.71, 357.979 )
 texture = ExtResource( 10 )
 
 [node name="CollisionShape2D" parent="Items/Puerta/Area2D" index="0"]
-shape = SubResource( 3 )
-
-[node name="Panel" parent="Items" instance=ExtResource( 1 )]
-position = Vector2( 1637.31, 311.652 )
-texture = ExtResource( 9 )
-
-[node name="CollisionShape2D" parent="Items/Panel/Area2D" index="0"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="Cajonera" parent="Items" instance=ExtResource( 11 )]
 position = Vector2( 456, 416 )
 texture = ExtResource( 6 )
 
 [node name="Area2D" parent="Items/Cajonera" index="0"]
-neededItem = "Libro"
+script = ExtResource( 36 )
+neededItem = "Cincel"
 
 [node name="CollisionShape2D" parent="Items/Cajonera/Area2D" index="0"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Cuadro" parent="Items" instance=ExtResource( 11 )]
 position = Vector2( 753, 350 )
 texture = ExtResource( 3 )
 
 [node name="Area2D" parent="Items/Cuadro" index="0"]
-neededItem = "LuzCargada"
+script = ExtResource( 19 )
 
 [node name="CollisionShape2D" parent="Items/Cuadro/Area2D" index="0"]
 position = Vector2( -1.5, -70 )
 rotation = -0.10472
+shape = SubResource( 4 )
+
+[node name="Biblioteca" type="AnimatedSprite" parent="Items"]
+position = Vector2( 1174, 365 )
+frames = SubResource( 5 )
+animation = "Idle"
+playing = true
+
+[node name="Area2D" type="Area2D" parent="Items/Biblioteca"]
+position = Vector2( -6, 66 )
+script = ExtResource( 35 )
+neededItem = "Libro"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Biblioteca/Area2D"]
+scale = Vector2( 19.142, 11.1 )
 shape = SubResource( 6 )
 
-[node name="Biblioteca" parent="Items" instance=ExtResource( 11 )]
-position = Vector2( 1174, 365 )
-texture = ExtResource( 5 )
+[node name="Light2D" type="Light2D" parent="Items/Biblioteca"]
+enabled = false
+texture = ExtResource( 16 )
+texture_scale = 2.46
+script = ExtResource( 17 )
 
-[node name="Area2D" parent="Items/Biblioteca" index="0"]
-position = Vector2( -6, 66 )
+[node name="Panel" type="Sprite" parent="Items"]
+position = Vector2( 1637.31, 311.652 )
+texture = ExtResource( 9 )
 
-[node name="CollisionShape2D" parent="Items/Biblioteca/Area2D" index="0"]
+[node name="Area2D" type="Area2D" parent="Items/Panel"]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Panel/Area2D"]
+scale = Vector2( 1.936, 3.636 )
+shape = SubResource( 6 )
+
+[node name="Light2D" type="Light2D" parent="Items/Panel"]
+enabled = false
+texture = ExtResource( 16 )
+texture_scale = 2.46
+script = ExtResource( 17 )
+
+[node name="Escultura" type="Sprite" parent="Items"]
+position = Vector2( 1427.49, 409.35 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Items/Escultura"]
+position = Vector2( 4.51, -25.35 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Escultura/Area2D"]
+scale = Vector2( 4.075, 8.61 )
 shape = SubResource( 7 )
+
+[node name="Light2D" type="Light2D" parent="Items/Escultura"]
+enabled = false
+texture = ExtResource( 16 )
+texture_scale = 2.46
+script = ExtResource( 17 )
 
 [node name="NavMesh" parent="." instance=ExtResource( 14 )]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="NavMesh"]
-navpoly = SubResource( 10 )
+navpoly = SubResource( 8 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 15 )]
 position = Vector2( 216, 600 )
@@ -127,17 +183,17 @@ position = Vector2( 216, 600 )
 [node name="Inventario" parent="." instance=ExtResource( 12 )]
 
 [node name="Typewriter_effect" parent="." instance=ExtResource( 13 )]
-
-[editable path="Items/Escultura"]
+[connection signal="mouse_entered" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Items/Panel/Area2D" to="Items/Panel/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Items/Panel/Area2D" to="Items/Panel/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Items/Escultura/Area2D" to="Items/Escultura/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Items/Escultura/Area2D" to="Items/Escultura/Area2D" method="_on_mouse_exited"]
 
 [editable path="Items/Libro"]
 
 [editable path="Items/Puerta"]
 
-[editable path="Items/Panel"]
-
 [editable path="Items/Cajonera"]
 
 [editable path="Items/Cuadro"]
-
-[editable path="Items/Biblioteca"]

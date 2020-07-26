@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/martillo-cincel.png-3513317881ca8f44a0a7002f1e1378ee.stex"
+path="res://.import/Aluminio.png-548ae3f009be1755d1d59a82a615ace6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/martillo-cincel.png"
-dest_files=[ "res://.import/martillo-cincel.png-3513317881ca8f44a0a7002f1e1378ee.stex" ]
+source_file="res://Sprites/Objetos/Aluminio.png"
+dest_files=[ "res://.import/Aluminio.png-548ae3f009be1755d1d59a82a615ace6.stex" ]
 
 [params]
 

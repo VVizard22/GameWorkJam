@@ -43,6 +43,10 @@ func Combine(item1, item2):
 			
 			added_item(resultados[s], ResourceLoader.load("res://Sprites/Objetos/"+ resultados[s]+ ".png"))
 			
+func Remove(item):
+	inventario.erase(item)
+	emit_signal("nuevoInventario")
+
 
 func _input(event):
 	if Input.is_action_just_released("left_click") and currentlyUsing != "":

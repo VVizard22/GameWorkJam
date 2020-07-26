@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pilas.png-b04411c9f852f9c1eefe646f7399516e.stex"
+path="res://.import/Cincel.png-036bfb89cd074bafc30aa82b19f2397a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/pilas.png"
-dest_files=[ "res://.import/pilas.png-b04411c9f852f9c1eefe646f7399516e.stex" ]
+source_file="res://Sprites/Objetos/Cincel.png"
+dest_files=[ "res://.import/Cincel.png-036bfb89cd074bafc30aa82b19f2397a.stex" ]
 
 [params]
 
