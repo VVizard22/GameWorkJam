@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Linterna.png-f9513b2fe47ce1df8615d278505057d2.stex"
+path="res://.import/linterna.png-65edb8dcc0ffe44ad4acb2474e9397ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/Linterna.png"
-dest_files=[ "res://.import/Linterna.png-f9513b2fe47ce1df8615d278505057d2.stex" ]
+source_file="res://Sprites/Objetos/linterna.png"
+dest_files=[ "res://.import/linterna.png-65edb8dcc0ffe44ad4acb2474e9397ca.stex" ]
 
 [params]
 

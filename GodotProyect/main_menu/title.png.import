@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panel.png-fd5b6150c86d58e596aa7b1af6b2366f.stex"
+path="res://.import/title.png-018de141a1b2d5845246bc2d98537104.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/panel.png"
-dest_files=[ "res://.import/panel.png-fd5b6150c86d58e596aa7b1af6b2366f.stex" ]
+source_file="res://main_menu/title.png"
+dest_files=[ "res://.import/title.png-018de141a1b2d5845246bc2d98537104.stex" ]
 
 [params]
 

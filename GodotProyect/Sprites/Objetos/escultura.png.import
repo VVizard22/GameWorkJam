@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Escultura.png-3964c873922ce40ba249b2a7989c37c5.stex"
+path="res://.import/escultura.png-71cbe69800a330ee75167198866af702.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/Escultura.png"
-dest_files=[ "res://.import/Escultura.png-3964c873922ce40ba249b2a7989c37c5.stex" ]
+source_file="res://Sprites/Objetos/escultura.png"
+dest_files=[ "res://.import/escultura.png-71cbe69800a330ee75167198866af702.stex" ]
 
 [params]
 
