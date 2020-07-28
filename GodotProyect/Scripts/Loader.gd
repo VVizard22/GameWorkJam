@@ -16,6 +16,6 @@ func _ready():
 func _changeScene(scene, transition):
 	if(transition != "none"):
 		wipeTransition.play(transition)
-		yield(get_tree().create_timer(1.01), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 	get_tree().change_scene_to(load(escenas[scene]))
 	currentScene = scene

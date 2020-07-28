@@ -30,29 +30,18 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=2]
 length = 2.0
+step = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("Fade:rect_position")
+tracks/0/path = NodePath("Wipe:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( -6, -6 ),
+"times": PoolRealArray( 0, 0.99, 1, 1.01, 2 ),
+"transitions": PoolRealArray( 5, 0.366022, 0.366022, 0.366022, 0.2 ),
 "update": 0,
-"values": [ Vector2( 1815, 0 ), Vector2( -1815, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Wipe:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( -6, -6 ),
-"update": 0,
-"values": [ Vector2( 1815, 0 ), Vector2( -1815, 0 ) ]
+"values": [ Vector2( 1815, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -1815, 0 ) ]
 }
 
 [node name="Transitions" type="CanvasLayer"]
@@ -91,6 +80,8 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="Wipe"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1.0
+margin_right = -1.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

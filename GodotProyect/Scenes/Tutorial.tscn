@@ -43,7 +43,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 80, 120 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "Fall"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
@@ -62,6 +62,9 @@ tracks/0/keys = {
 extents = Vector2( 24, 32 )
 
 [node name="Tutorial" type="Node"]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource( 28 )
 
 [node name="Habitación" type="Sprite" parent="."]
 position = Vector2( 696, 1000 )
@@ -106,7 +109,6 @@ texture = ExtResource( 20 )
 position = Vector2( 960, 688 )
 frames = SubResource( 1 )
 animation = "Asleep"
-frame = 6
 playing = true
 offset = Vector2( 64, -192 )
 flip_h = true
@@ -128,12 +130,9 @@ energy = 0.7
 script = ExtResource( 27 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
-anims/Fall = SubResource( 5 )
+anims/Fall = SubResource( 3 )
 
 [node name="Typewriter_effect" parent="." instance=ExtResource( 25 )]
-
-[node name="Node" type="Node" parent="."]
-script = ExtResource( 28 )
 
 [node name="Inventario" parent="." instance=ExtResource( 30 )]
 
