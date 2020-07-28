@@ -10,8 +10,9 @@ func _process(delta):
 		var areas = self.get_overlapping_areas()
 		for s in areas:
 			if s.get_parent().is_in_group("Player"):
-				self.get_parent().animation = "Compartimiento"
 				Inventario.Remove(neededItem)
+				self.get_parent().animation = "Compartimiento"
+				yield(get_tree().create_timer(1), "timeout")
 				Inventario.added_item("Pilas AAA", ResourceLoader.load("res://Sprites/Objetos/Pilas AAA.png"))
 				Inventario.added_item("Anotaciones", ResourceLoader.load("res://Sprites/Objetos/Anotaciones.png"))
 				Dialogo.get_topic("Compartimiento")

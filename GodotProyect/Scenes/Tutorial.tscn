@@ -71,10 +71,6 @@ position = Vector2( 696, 1000 )
 texture = ExtResource( 1 )
 offset = Vector2( 208, -616 )
 
-[node name="Visible" type="Sprite" parent="."]
-position = Vector2( 1000, 472 )
-offset = Vector2( 1015.52, 464 )
-
 [node name="NonInteractables" type="Node" parent="."]
 
 [node name="Libro" type="Sprite" parent="NonInteractables"]
@@ -109,6 +105,7 @@ texture = ExtResource( 20 )
 position = Vector2( 960, 688 )
 frames = SubResource( 1 )
 animation = "Asleep"
+frame = 6
 playing = true
 offset = Vector2( 64, -192 )
 flip_h = true

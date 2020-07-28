@@ -27,7 +27,8 @@ var descripcion = {	"Linterna": "Una linterna con luz ultravioleta, pero necesit
 					
 					"Anotaciones": "Son las anotaciones del artista... pero hay una página marcada.",
 					
-					"Cuerda": "",
+					"Cuerda": "Zac está atado, lo primero que tenemos que hacer es desatarlo para desperarlo",
+					"Cuchillo": "Tal vez este cuchillo pueda cortar esas cuerdas",
 					
 					"Cajonera": "No hay nada muy interesante en los cajones... pero el ultimo está cerrado.",
 					"AbrirCajon": "Ese último cajón enía una linterna, pero requiere unas pilas AA para funcionar.",

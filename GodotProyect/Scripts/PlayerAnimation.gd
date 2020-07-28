@@ -42,9 +42,7 @@ func _process(delta):
 	lastPosTimer += 1
 
 func _input(event):
-	if event.is_action_pressed("left_click"):
-		idleTimer = 0
-	if event.is_action_pressed("right_click"):
+	if event.is_action_pressed("left_click") or event.is_action_pressed("right_click"):
 		idleTimer = 0
 	if Inventario.currentlyUsing != "":
 		if event.is_action_released("left_click"):

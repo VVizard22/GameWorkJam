@@ -22,10 +22,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.101, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( -1815, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -1815, 0 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -49,8 +49,8 @@ tracks/0/keys = {
 [node name="Fade" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1815.0
-margin_right = 1815.0
+margin_left = -1815.0
+margin_right = -1815.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

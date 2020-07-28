@@ -36,9 +36,10 @@ func _input(event: InputEvent) -> void:
 		cuchillo = true
 
 func cuchillo():
-	get_parent().get_node("Cuchillo/Area2D").visible = true
+	
 	Dialogo.direc_Text("El click izquierdo tambien te va a perimitr agarrar objetos y ponerlos en tu inventario... probá con ese cuchillo-")
 	yield(get_tree().create_timer(5), "timeout")
+	get_parent().get_node("Cuchillo/Area2D").visible = true
 	Dialogo.direc_Text("Y una vez en tu inventario podes arrastrarlos y soltarlos en un objeto de la escena para alterarlo-")
 	yield(get_tree().create_timer(5), "timeout")
 	

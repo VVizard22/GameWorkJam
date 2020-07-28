@@ -3,7 +3,6 @@ extends Area2D
 
 var hover = false
 export var standing = true
-onready var animations = $"/root/WipeTransition"
 
 
 func _on_mouse_entered() -> void:
@@ -19,4 +18,5 @@ func _input(event):
 		get_parent().get_node("Hint").enabled = false
 		standing = false
 	if hover and Inventario.currentlyUsing == "Cuchillo" and event.is_action_released("left_click") and standing == false:
+		Inventario.Remove("Cuchillo")
 		Loader._changeScene("ArtRoom", "Fade")
