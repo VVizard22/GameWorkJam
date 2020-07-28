@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/puerta.png-c6655019eca8fdf43cf447265948d27f.stex"
+path="res://.import/Puerta.png-5b9fbb195e43e0b4e3c12a79b1f4b657.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/puerta.png"
-dest_files=[ "res://.import/puerta.png-c6655019eca8fdf43cf447265948d27f.stex" ]
+source_file="res://Sprites/Objetos/Puerta.png"
+dest_files=[ "res://.import/Puerta.png-5b9fbb195e43e0b4e3c12a79b1f4b657.stex" ]
 
 [params]
 

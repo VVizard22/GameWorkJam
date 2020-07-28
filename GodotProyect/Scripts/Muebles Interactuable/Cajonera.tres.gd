@@ -4,18 +4,23 @@ extends Area2D
 export(String) var neededItem
 var hover = false
 var active = false
+var notUsed = true
 
 func _process(delta):
 	if active:
 		var areas = self.get_overlapping_areas()
 		for s in areas:
-			if s.get_parent().is_in_group("Player"):
+			if s.get_parent().is_in_group("Player") and notUsed:
 				Inventario.durabCincel -= 1
 				if Inventario.durabCincel == 0:
 					Inventario.Remove(neededItem)
 				Inventario.added_item("Linterna", ResourceLoader.load("res://Sprites/Objetos/Linterna.png"))
 				Dialogo.get_topic("AbrirCajon")
 				active = false
+				notUsed = false
+	elif active and notUsed == false:
+		Dialogo.direc_Text("Ya abrí el cajón")
+
 
 func _on_mouse_entered():
 	hover = true

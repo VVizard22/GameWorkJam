@@ -5,7 +5,6 @@
 [ext_resource path="res://Scripts/Pista.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/Light.png" type="Texture" id=4]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
@@ -20,7 +19,6 @@ shape = SubResource( 1 )
 
 [node name="Hint" type="Light2D" parent="."]
 position = Vector2( 1.90735e-06, 0 )
-scale = Vector2( 1, 1 )
 enabled = false
 texture = ExtResource( 4 )
 texture_scale = 2.46

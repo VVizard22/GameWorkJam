@@ -2,6 +2,10 @@ extends Node
 
 signal topico
 signal phrase
+signal ayuda
+
+var writing = false
+var primeraVezSala = true
 
 var random = ["1","2","3","4"]
 var descripcion = {	"Linterna": "Una linterna con luz ultravioleta, pero necesita unas pilas AA para funcionar.",
@@ -40,3 +44,6 @@ func get_topic(topic):
 func rand_phrase():
 	var rand = randi()%4
 	emit_signal("phrase", rand)
+
+func direc_Text(text):
+	emit_signal("ayuda", text)

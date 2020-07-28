@@ -22,9 +22,15 @@ func can_drop_data(_pos, data):
 func drop_data(_pos, data):
 	if Inventario.ValidComb(name, data):
 		Inventario.Combine(name, data)
+	
+	elif data == "Pilas AAA" and self.name == "Linterna":
+		Dialogo.direc_Text("Estas pilas no le terminan de servir a la linterna, necesita unas mas grandes")
+	elif data == "Linterna" and self.name == "Pilas AAA":
+		Dialogo.direc_Text("Estas pilas no le terminan de servir a la linterna, necesita unas mas grandes")
 	else:
 		Dialogo.get_topic("NoCombina")
-		
+	
+	
 
 
 
