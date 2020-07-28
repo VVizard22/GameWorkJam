@@ -4,7 +4,6 @@ signal topico
 signal phrase
 signal ayuda
 
-var writing = false
 var primeraVezSala = true
 
 var random = ["1","2","3","4"]

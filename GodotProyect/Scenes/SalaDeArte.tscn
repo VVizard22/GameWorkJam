@@ -50,15 +50,15 @@ extents = Vector2( 63.7164, 65.6997 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 33 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 30 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 22 ) ],
-"loop": false,
-"name": "Compartimiento",
-"speed": 14.0
-}, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 30 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 22 ) ],
+"loop": false,
+"name": "Compartimiento",
+"speed": 14.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
