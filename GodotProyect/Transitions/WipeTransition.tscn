@@ -1,10 +1,37 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [sub_resource type="Animation" id=1]
-resource_name = "Wipe"
+resource_name = "Fade"
 length = 2.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control:rect_position")
+tracks/0/path = NodePath("Fade/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 0.378929, 1, 3.605 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Fade:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -15,10 +42,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 1815, 0 ), Vector2( -1815, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Wipe:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( -6, -6 ),
+"update": 0,
+"values": [ Vector2( 1815, 0 ), Vector2( -1815, 0 ) ]
+}
 
-[node name="WipeTransition" type="CanvasLayer"]
+[node name="Transitions" type="CanvasLayer"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Fade" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1815.0
@@ -27,14 +66,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="Fade"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 0.00317383
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Wipe = SubResource( 1 )
+anims/Fade = SubResource( 1 )
+anims/Wipe = SubResource( 2 )
+
+[node name="Wipe" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1815.0
+margin_right = 1815.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Wipe"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
