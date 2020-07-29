@@ -15,5 +15,6 @@ func text():
 	Dialogo.direc_Text("Ooof, no se como me salvé de esa, es como si una fuerza extraña me hubiese ayudado.")
 	yield(get_tree().create_timer(5), "timeout")
 	Dialogo.direc_Text("Ahora me tengo que concentrar en salir de esta habitacion para resolver el caso, estaba tan cerca.")
+	yield(get_tree().create_timer(5), "timeout")
 	for s in items:
 			s.get_node("Area2D").visible = true
