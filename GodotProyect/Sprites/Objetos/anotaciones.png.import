@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Anotaciones.png-8bca63c50ad5fd86595aa56ad07b7c6c.stex"
+path="res://.import/anotaciones.png-e9e1f6a2059b9fcaa62a9c0cd2e870f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/Anotaciones.png"
-dest_files=[ "res://.import/Anotaciones.png-8bca63c50ad5fd86595aa56ad07b7c6c.stex" ]
+source_file="res://Sprites/Objetos/anotaciones.png"
+dest_files=[ "res://.import/anotaciones.png-e9e1f6a2059b9fcaa62a9c0cd2e870f1.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panel.png-fd5b6150c86d58e596aa7b1af6b2366f.stex"
+path="res://.import/jugar-boton.png-c400ff0962b164b8b936eaf1feb491f6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/panel.png"
-dest_files=[ "res://.import/panel.png-fd5b6150c86d58e596aa7b1af6b2366f.stex" ]
+source_file="res://Sprites/Menu principal/jugar-boton.png"
+dest_files=[ "res://.import/jugar-boton.png-c400ff0962b164b8b936eaf1feb491f6.stex" ]
 
 [params]
 
