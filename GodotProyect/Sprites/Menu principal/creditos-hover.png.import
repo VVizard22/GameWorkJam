@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panel.png-fd5b6150c86d58e596aa7b1af6b2366f.stex"
+path="res://.import/creditos-hover.png-ab5bd589e00d2ee43d572173ebaad8e8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/panel.png"
-dest_files=[ "res://.import/panel.png-fd5b6150c86d58e596aa7b1af6b2366f.stex" ]
+source_file="res://Sprites/Menu principal/creditos-hover.png"
+dest_files=[ "res://.import/creditos-hover.png-ab5bd589e00d2ee43d572173ebaad8e8.stex" ]
 
 [params]
 
