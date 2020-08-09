@@ -21,5 +21,6 @@ func _on_mouse_exited() -> void:
 func _input(event):
 	if event.is_action_pressed("left_click") and hover:
 		clicked = true
+		Loader._changeScene("Panel", "Wipe")
 	if event.is_action_pressed("right_click") and hover:
 		Dialogo.get_topic("Panel")

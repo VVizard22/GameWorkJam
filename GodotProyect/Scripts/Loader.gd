@@ -7,6 +7,7 @@ var escenas = {
 	"Menu": "res://Menu/MainMenu.tscn",
 	"Opciones": "",
 	"Tutorial": "res://Scenes/Tutorial.tscn",
+	"Panel": "res://Scenes/Panel.tcsn",
 	"PauseMenu": ""
 }
 
