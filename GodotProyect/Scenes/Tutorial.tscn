@@ -37,7 +37,7 @@ animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 15 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "Asleep",
-"speed": 4.0
+"speed": 5.75
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -105,7 +105,7 @@ texture = ExtResource( 20 )
 position = Vector2( 960, 688 )
 frames = SubResource( 1 )
 animation = "Asleep"
-frame = 6
+frame = 4
 playing = true
 offset = Vector2( 64, -192 )
 flip_h = true
