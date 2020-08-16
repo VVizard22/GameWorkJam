@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Control
 
 
 func play_pressed():
@@ -8,3 +8,7 @@ func play_pressed():
 func options_pressed():
 	pass
 	#get_tree().change_scene_to(options_scn)
+
+
+func _on_Salir_pressed():
+	get_tree().quit()

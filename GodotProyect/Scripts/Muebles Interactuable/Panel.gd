@@ -9,7 +9,9 @@ func _process(delta):
 		var areas = self.get_overlapping_areas()
 		for s in areas:
 			if s.get_parent().is_in_group("Player"):
+				self.get_parent().get_parent().get_parent().get_node("Zoom/Panel").visible = true
 				clicked = false
+
 
 func _on_mouse_entered() -> void:
 	hover = true
@@ -21,6 +23,5 @@ func _on_mouse_exited() -> void:
 func _input(event):
 	if event.is_action_pressed("left_click") and hover:
 		clicked = true
-		Loader._changeScene("Panel", "Wipe")
 	if event.is_action_pressed("right_click") and hover:
 		Dialogo.get_topic("Panel")

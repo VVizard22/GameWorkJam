@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Scenes/Interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/NavMesh.tscn" type="PackedScene" id=2]
@@ -38,6 +38,7 @@
 [ext_resource path="res://Scripts/Puerta.tres.gd" type="Script" id=36]
 [ext_resource path="res://Scripts/Muebles Interactuable/Cajonera.tres.gd" type="Script" id=37]
 [ext_resource path="res://Scripts/FirstTimeText.gd" type="Script" id=38]
+[ext_resource path="res://Scenes/Panel.tscn" type="PackedScene" id=39]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.41, 19.939 )
@@ -188,7 +189,7 @@ navpoly = SubResource( 7 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
 position = Vector2( 1016, 640 )
-frame = 24
+frame = 3
 
 [node name="Inventario" parent="." instance=ExtResource( 5 )]
 
@@ -196,6 +197,11 @@ frame = 24
 
 [node name="FirstTimeText" type="Node" parent="."]
 script = ExtResource( 38 )
+
+[node name="Zoom" type="Node" parent="."]
+
+[node name="Panel" parent="Zoom" instance=ExtResource( 39 )]
+visible = false
 [connection signal="mouse_entered" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Items/Panel/Area2D" to="Items/Panel/Area2D" method="_on_mouse_entered"]
