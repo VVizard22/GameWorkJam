@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/habitacion.png-854c99861b2aecd836a8ba5933b6dbd1.stex"
+path="res://.import/Habitacion.png-acf6e52dbbc70ded02ef2249f5890696.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/habitacion.png"
-dest_files=[ "res://.import/habitacion.png-854c99861b2aecd836a8ba5933b6dbd1.stex" ]
+source_file="res://Sprites/Objetos/Habitacion.png"
+dest_files=[ "res://.import/Habitacion.png-acf6e52dbbc70ded02ef2249f5890696.stex" ]
 
 [params]
 

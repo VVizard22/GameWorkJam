@@ -10,7 +10,7 @@
 [ext_resource path="res://Sprites/Light.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Objetos/Escultura.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Objetos/Cuadro.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Objetos/habitacion.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Objetos/Habitacion.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Objetos/Biblioteca.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Objetos/Cajonera.png" type="Texture" id=13]
 [ext_resource path="res://Scripts/Muebles Interactuable/Cuadro.tres.gd" type="Script" id=14]
@@ -189,7 +189,7 @@ navpoly = SubResource( 7 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
 position = Vector2( 1016, 640 )
-frame = 3
+frame = 53
 
 [node name="Inventario" parent="." instance=ExtResource( 5 )]
 

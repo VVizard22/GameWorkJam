@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=2]
 
-[ext_resource path="res://Sprites/Objetos/habitacion.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Objetos/Habitacion.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Animaciones/Dormido en silla/zack-seucestrado-06.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Animaciones/Dormido en silla/zack-seucestrado-07.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Objetos/Puerta.png" type="Texture" id=4]
@@ -105,7 +105,7 @@ texture = ExtResource( 20 )
 position = Vector2( 960, 688 )
 frames = SubResource( 1 )
 animation = "Asleep"
-frame = 4
+frame = 5
 playing = true
 offset = Vector2( 64, -192 )
 flip_h = true

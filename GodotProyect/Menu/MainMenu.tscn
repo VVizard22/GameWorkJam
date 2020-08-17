@@ -60,3 +60,4 @@ texture_hover = ExtResource( 1 )
 [connection signal="pressed" from="HBoxContainer/Salir" to="." method="play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Salir" to="." method="_on_Salir_pressed"]
 [connection signal="pressed" from="HBoxContainer/Creditos" to="." method="play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Creditos" to="." method="_on_Creditos_pressed"]
