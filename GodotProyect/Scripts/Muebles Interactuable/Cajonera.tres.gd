@@ -34,7 +34,7 @@ func _input(event):
 		Dialogo.get_topic("Cajonera")
 	if Input.is_action_pressed("left_click") and hover:
 		self.get_parent().play("Cajones")
-		yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(3), "timeout")
 		self.get_parent().play("Idle")
 	if Input.is_action_just_released("left_click") and hover and Inventario.currentlyUsing != "":
 		if neededItem == Inventario.currentlyUsing:
