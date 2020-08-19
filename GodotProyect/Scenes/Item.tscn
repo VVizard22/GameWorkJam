@@ -6,7 +6,7 @@
 [ext_resource path="res://Scripts/Pista.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
+extents = Vector2( 190.233, 53.2139 )
 
 [node name="Sprite" type="Sprite"]
 texture = ExtResource( 2 )

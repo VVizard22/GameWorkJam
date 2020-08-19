@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Scenes/Interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/NavMesh.tscn" type="PackedScene" id=2]
@@ -39,34 +39,60 @@
 [ext_resource path="res://Scripts/Muebles Interactuable/Cajonera.tres.gd" type="Script" id=37]
 [ext_resource path="res://Scripts/FirstTimeText.gd" type="Script" id=38]
 [ext_resource path="res://Scenes/Panel.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Sprites/Objetos/Caballo.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/Objetos/Alfombra.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/Objetos/Cajon4-abierto-cajonera.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/Objetos/Llave.png" type="Texture" id=43]
+[ext_resource path="res://Scripts/Muebles Interactuable/Alfombra.gd" type="Script" id=44]
+[ext_resource path="res://Sprites/Objetos/Cajon3-abierto-cajonera.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/Objetos/Cajon1-abierto-cajonera.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/Objetos/Cajon2-abierto-cajonera.png" type="Texture" id=47]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.41, 19.939 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 128, 104 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 63.7164, 65.6997 )
-
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 12 ) ],
+"frames": [ ExtResource( 13 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "Cajones",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 46 ) ],
+"loop": true,
+"name": "Trabado",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 126.426, 107.967 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 63.7164, 65.6997 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
 "frames": [ ExtResource( 33 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 30 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 31 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 22 ) ],
 "loop": false,
 "name": "Compartimiento",
 "speed": 14.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
 } ]
-
-[sub_resource type="RectangleShape2D" id=5]
 
 [sub_resource type="RectangleShape2D" id=6]
 
-[sub_resource type="NavigationPolygon" id=7]
+[sub_resource type="RectangleShape2D" id=7]
+
+[sub_resource type="NavigationPolygon" id=8]
 vertices = PoolVector2Array( 1496, 552, 1600, 544, 1768, 760, 64, 768, 1344, 568, 64, 512, 272, 512, 304, 576, 704, 584, 1528, 544, 992, 568 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 3, 5, 6, 7 ), PoolIntArray( 3, 7, 8 ), PoolIntArray( 0, 9, 1 ), PoolIntArray( 4, 3, 8, 10 ) ]
 outlines = [ PoolVector2Array( 64, 512, 272, 512, 304, 576, 704, 584, 992, 568, 1344, 568, 1496, 552, 1528, 544, 1600, 544, 1768, 760, 64, 768 ) ]
@@ -79,6 +105,10 @@ texture = ExtResource( 11 )
 
 [node name="Items" type="Node" parent="."]
 
+[node name="Llave" parent="Items" instance=ExtResource( 4 )]
+position = Vector2( 1038.15, 634.337 )
+texture = ExtResource( 43 )
+
 [node name="Libro" parent="Items" instance=ExtResource( 4 )]
 position = Vector2( 456, 608 )
 texture = ExtResource( 19 )
@@ -86,16 +116,23 @@ texture = ExtResource( 19 )
 [node name="CollisionShape2D" parent="Items/Libro/Area2D" index="0"]
 shape = SubResource( 1 )
 
-[node name="Cajonera" parent="Items" instance=ExtResource( 1 )]
-position = Vector2( 456, 416 )
-texture = ExtResource( 13 )
+[node name="Cajonera" type="AnimatedSprite" parent="Items"]
+position = Vector2( 476.401, 416.884 )
+frames = SubResource( 9 )
+animation = "Idle"
+playing = true
 
-[node name="Area2D" parent="Items/Cajonera" index="0"]
+[node name="Area2D" type="Area2D" parent="Items/Cajonera"]
 script = ExtResource( 37 )
 neededItem = "Cincel"
 
-[node name="CollisionShape2D" parent="Items/Cajonera/Area2D" index="0"]
-shape = SubResource( 2 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Cajonera/Area2D"]
+shape = SubResource( 10 )
+
+[node name="Light2D" type="Light2D" parent="Items/Cajonera"]
+enabled = false
+texture = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="Cuadro" parent="Items" instance=ExtResource( 1 )]
 position = Vector2( 753, 350 )
@@ -107,11 +144,11 @@ script = ExtResource( 14 )
 [node name="CollisionShape2D" parent="Items/Cuadro/Area2D" index="0"]
 position = Vector2( -1.5, -70 )
 rotation = -0.10472
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Biblioteca" type="AnimatedSprite" parent="Items"]
 position = Vector2( 1174, 365 )
-frames = SubResource( 4 )
+frames = SubResource( 5 )
 animation = "Idle"
 playing = true
 
@@ -122,7 +159,7 @@ neededItem = "Libro"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Biblioteca/Area2D"]
 scale = Vector2( 19.142, 11.1 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="Items/Biblioteca"]
 enabled = false
@@ -139,13 +176,18 @@ script = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Panel/Area2D"]
 scale = Vector2( 1.936, 3.636 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="Items/Panel"]
 enabled = false
 texture = ExtResource( 8 )
 texture_scale = 2.46
 script = ExtResource( 7 )
+
+[node name="Caballo" parent="Items" instance=ExtResource( 4 )]
+position = Vector2( 1293, 407.325 )
+scale = Vector2( 0.692308, 0.723781 )
+texture = ExtResource( 40 )
 
 [node name="Puerta" type="Sprite" parent="Items"]
 position = Vector2( 1715, 358 )
@@ -156,7 +198,7 @@ script = ExtResource( 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Puerta/Area2D"]
 scale = Vector2( 4.319, 33.159 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="Items/Puerta"]
 enabled = false
@@ -174,7 +216,7 @@ script = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Escultura/Area2D"]
 scale = Vector2( 4.075, 8.61 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="Light2D" type="Light2D" parent="Items/Escultura"]
 enabled = false
@@ -182,14 +224,21 @@ texture = ExtResource( 8 )
 texture_scale = 2.46
 script = ExtResource( 7 )
 
+[node name="Alfombra" parent="Items" instance=ExtResource( 4 )]
+position = Vector2( 1182.97, 605.63 )
+texture = ExtResource( 41 )
+
+[node name="Area2D" parent="Items/Alfombra" index="0"]
+script = ExtResource( 44 )
+
 [node name="NavMesh" parent="." instance=ExtResource( 2 )]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="NavMesh"]
-navpoly = SubResource( 7 )
+navpoly = SubResource( 8 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
 position = Vector2( 1016, 640 )
-frame = 53
+frame = 45
 
 [node name="Inventario" parent="." instance=ExtResource( 5 )]
 
@@ -202,6 +251,8 @@ script = ExtResource( 38 )
 
 [node name="Panel" parent="Zoom" instance=ExtResource( 39 )]
 visible = false
+[connection signal="mouse_entered" from="Items/Cajonera/Area2D" to="Items/Cajonera/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Items/Cajonera/Area2D" to="Items/Cajonera/Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Items/Panel/Area2D" to="Items/Panel/Area2D" method="_on_mouse_entered"]
@@ -213,6 +264,6 @@ visible = false
 
 [editable path="Items/Libro"]
 
-[editable path="Items/Cajonera"]
-
 [editable path="Items/Cuadro"]
+
+[editable path="Items/Alfombra"]

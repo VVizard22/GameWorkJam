@@ -14,6 +14,7 @@ func _process(delta):
 				Inventario.durabCincel -= 1
 				if Inventario.durabCincel == 0:
 					Inventario.Remove(neededItem)
+				self.get_parent().play("Trabado")
 				Inventario.added_item("Linterna", ResourceLoader.load("res://Sprites/Objetos/Linterna.png"))
 				Dialogo.get_topic("AbrirCajon")
 				active = false
@@ -31,6 +32,10 @@ func _on_mouse_exited():
 func _input(event):
 	if Input.is_action_just_pressed("right_click") and hover:
 		Dialogo.get_topic("Cajonera")
+	if Input.is_action_pressed("left_click") and hover:
+		self.get_parent().play("Cajones")
+		yield(get_tree().create_timer(1), "timeout")
+		self.get_parent().play("Idle")
 	if Input.is_action_just_released("left_click") and hover and Inventario.currentlyUsing != "":
 		if neededItem == Inventario.currentlyUsing:
 			_activate_Item()
