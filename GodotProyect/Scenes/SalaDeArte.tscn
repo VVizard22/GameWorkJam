@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Scenes/Interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/NavMesh.tscn" type="PackedScene" id=2]
@@ -58,15 +58,15 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 47 ) ],
-"loop": true,
-"name": "Cajones",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 46 ) ],
 "loop": true,
 "name": "Trabado",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 47 ) ],
+"loop": false,
+"name": "Cajones",
+"speed": 1.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -91,8 +91,17 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 
 [sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 42.2836, 41.1497 )
 
-[sub_resource type="NavigationPolygon" id=8]
+[sub_resource type="RectangleShape2D" id=8]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 14.0978, 17.7144 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 204.825, 54.6068 )
+
+[sub_resource type="NavigationPolygon" id=11]
 vertices = PoolVector2Array( 1496, 552, 1600, 544, 1768, 760, 64, 768, 1344, 568, 64, 512, 272, 512, 304, 576, 704, 584, 1528, 544, 992, 568 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 3, 5, 6, 7 ), PoolIntArray( 3, 7, 8 ), PoolIntArray( 0, 9, 1 ), PoolIntArray( 4, 3, 8, 10 ) ]
 outlines = [ PoolVector2Array( 64, 512, 272, 512, 304, 576, 704, 584, 992, 568, 1344, 568, 1496, 552, 1528, 544, 1600, 544, 1768, 760, 64, 768 ) ]
@@ -104,10 +113,6 @@ position = Vector2( 904, 384 )
 texture = ExtResource( 11 )
 
 [node name="Items" type="Node" parent="."]
-
-[node name="Llave" parent="Items" instance=ExtResource( 4 )]
-position = Vector2( 1038.15, 634.337 )
-texture = ExtResource( 43 )
 
 [node name="Libro" parent="Items" instance=ExtResource( 4 )]
 position = Vector2( 456, 608 )
@@ -189,6 +194,9 @@ position = Vector2( 1293, 407.325 )
 scale = Vector2( 0.692308, 0.723781 )
 texture = ExtResource( 40 )
 
+[node name="CollisionShape2D" parent="Items/Caballo/Area2D" index="0"]
+shape = SubResource( 7 )
+
 [node name="Puerta" type="Sprite" parent="Items"]
 position = Vector2( 1715, 358 )
 texture = ExtResource( 18 )
@@ -216,13 +224,20 @@ script = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Escultura/Area2D"]
 scale = Vector2( 4.075, 8.61 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Light2D" type="Light2D" parent="Items/Escultura"]
 enabled = false
 texture = ExtResource( 8 )
 texture_scale = 2.46
 script = ExtResource( 7 )
+
+[node name="Llave" parent="Items" instance=ExtResource( 4 )]
+position = Vector2( 1040.67, 623.616 )
+texture = ExtResource( 43 )
+
+[node name="CollisionShape2D" parent="Items/Llave/Area2D" index="0"]
+shape = SubResource( 9 )
 
 [node name="Alfombra" parent="Items" instance=ExtResource( 4 )]
 position = Vector2( 1182.97, 605.63 )
@@ -231,14 +246,18 @@ texture = ExtResource( 41 )
 [node name="Area2D" parent="Items/Alfombra" index="0"]
 script = ExtResource( 44 )
 
+[node name="CollisionShape2D" parent="Items/Alfombra/Area2D" index="0"]
+position = Vector2( 1.41577, 2.8316 )
+shape = SubResource( 10 )
+
 [node name="NavMesh" parent="." instance=ExtResource( 2 )]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="NavMesh"]
-navpoly = SubResource( 8 )
+navpoly = SubResource( 11 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
 position = Vector2( 1016, 640 )
-frame = 55
+frame = 13
 
 [node name="Inventario" parent="." instance=ExtResource( 5 )]
 
@@ -265,5 +284,9 @@ visible = false
 [editable path="Items/Libro"]
 
 [editable path="Items/Cuadro"]
+
+[editable path="Items/Caballo"]
+
+[editable path="Items/Llave"]
 
 [editable path="Items/Alfombra"]

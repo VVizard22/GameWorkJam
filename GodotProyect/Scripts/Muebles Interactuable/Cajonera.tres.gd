@@ -5,6 +5,7 @@ export(String) var neededItem
 var hover = false
 var active = false
 var notUsed = true
+var abierto = false
 
 func _process(delta):
 	if active:
@@ -33,9 +34,9 @@ func _input(event):
 	if Input.is_action_just_pressed("right_click") and hover:
 		Dialogo.get_topic("Cajonera")
 	if Input.is_action_pressed("left_click") and hover:
-		self.get_parent().play("Cajones")
-		yield(get_tree().create_timer(3), "timeout")
-		self.get_parent().play("Idle")
+		if not abierto:
+			self.get_parent().play("Cajones")
+		abierto = true
 	if Input.is_action_just_released("left_click") and hover and Inventario.currentlyUsing != "":
 		if neededItem == Inventario.currentlyUsing:
 			_activate_Item()
