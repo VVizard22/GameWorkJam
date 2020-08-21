@@ -24,13 +24,15 @@
 [ext_resource path="res://Sprites/Objetos/Biblioteca.png" type="Texture" id=22]
 [ext_resource path="res://Sprites/Objetos/Cuchillo.png" type="Texture" id=23]
 [ext_resource path="res://Scripts/TutorialChair.gd" type="Script" id=24]
-[ext_resource path="res://Scenes/Typewriter_effect.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Escenas Pieza/Typewriter_effect.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Sprites/Light.png" type="Texture" id=26]
 [ext_resource path="res://Scripts/Pista.gd" type="Script" id=27]
 [ext_resource path="res://Scripts/TutorialText.gd" type="Script" id=28]
-[ext_resource path="res://Scenes/Item.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Scenes/ShowInventory.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Scenes/Escenas Pieza/Item.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Scenes/Inventario/ShowInventory.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Scripts/Cuchillo.tres.gd" type="Script" id=31]
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

@@ -1,18 +1,18 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Sprites/Menu principal/creditos-hover.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/Menu principal/jugar-hover.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Menu principal/creditos-boton.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Menu principal/fondo.jpg" type="Texture" id=5]
-[ext_resource path="res://Sprites/Menu principal/salir-boton.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Menu principal/salir-hover.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Menu principal/jugar-boton.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Menu principal/creditos-boton.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Menu principal/creditos-hover.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Menu principal/salir-hover.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Menu principal/jugar-boton.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Menu principal/jugar-hover.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Menu principal/salir-boton.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Menu principal/fondo.jpg" type="Texture" id=8]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -20,7 +20,7 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -40,22 +40,22 @@ alignment = 1
 margin_left = 568.0
 margin_right = 741.0
 margin_bottom = 54.0
-texture_normal = ExtResource( 8 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
 
 [node name="Salir" type="TextureButton" parent="HBoxContainer"]
 margin_left = 821.0
 margin_right = 994.0
 margin_bottom = 54.0
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 7 )
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 4 )
 
 [node name="Creditos" type="TextureButton" parent="HBoxContainer"]
 margin_left = 1074.0
 margin_right = 1247.0
 margin_bottom = 54.0
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 1 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Salir" to="." method="play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Salir" to="." method="_on_Salir_pressed"]

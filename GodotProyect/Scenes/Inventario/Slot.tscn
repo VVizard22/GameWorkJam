@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Dialogo y manejo de inventario/DragDrop1.gd" type="Script" id=1]
+
+[node name="Container" type="ColorRect"]
+margin_right = 120.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 120, 90 )
+color = Color( 0.129412, 0.129412, 0.129412, 0.552941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot" type="TextureRect" parent="CenterContainer"]
+margin_left = 60.0
+margin_top = 45.0
+margin_right = 60.0
+margin_bottom = 45.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="CenterContainer/Slot" to="CenterContainer/Slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CenterContainer/Slot" to="CenterContainer/Slot" method="_on_mouse_exited"]
