@@ -17,17 +17,23 @@ func newSlot():
 
 func _ready():
 	Inventario.connect("nuevoInventario", self, "_on_nuevoInventario")
-	Inventario.connect("combineItems", self, "_on_combineItems")
+	Inventario.connect("eliminar", self, "borrarItems")
 
 func _on_nuevoInventario():
+	for items in slots:
+		items.name = "slot"
+		items.get_child(0).get_child(0).name = "Slot"
+		items.get_child(0).get_child(0).texture = null
 	for key in Inventario.inventario:
 		var useSlot = Inventario.inventario.keys().find(key)
 		slots[useSlot].get_child(0).get_child(0).name = key
+		slots[useSlot].name = key
 		slots[useSlot].get_child(0).get_child(0).texture = Inventario.inventario[key]
 
-func _on_combineItems():
-	for key in Inventario.inventario:
-		var useSlot = Inventario.inventario.keys().find(key)
-		if useSlot == -1:
-			deleteSlot(useSlot)
-			newSlot()
+
+func borrarItems(item):
+	for items in slots:
+		if items.name == item:
+			Inventario.inventario.erase(item)
+			items.get_child(0).get_child(0).texture = null
+

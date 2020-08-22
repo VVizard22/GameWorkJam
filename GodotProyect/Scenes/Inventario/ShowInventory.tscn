@@ -60,3 +60,5 @@ margin_right = 1541.0
 [node name="Container9" parent="GridContainer" instance=ExtResource( 2 )]
 margin_left = 1624.0
 margin_right = 1744.0
+
+[editable path="GridContainer/Container"]
