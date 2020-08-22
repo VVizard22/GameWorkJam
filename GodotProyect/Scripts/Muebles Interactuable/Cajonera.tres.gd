@@ -40,6 +40,9 @@ func _input(event):
 	if Input.is_action_just_released("left_click") and hover and Inventario.currentlyUsing != "":
 		if neededItem == Inventario.currentlyUsing:
 			_activate_Item()
+		elif Inventario.currentlyUsing == "Llave":
+			Dialogo.direc_Text("Diablos se rompio la llave, tendre que forzar el cajon o quiza romperlo")
+			Inventario.Remove("Llave")
 		else:
 			Dialogo.get_topic("NoCombina")
 

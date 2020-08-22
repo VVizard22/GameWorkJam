@@ -12,7 +12,7 @@ var currentlyUsing = ""
 
 var inventario = {}
 
-var resultados = {"Pilas AAAAluminio": "Pilas AA", "Pilas AALinterna": "Linterna Cargada"}
+var resultados = {"Pilas AAAAluminio": "Pilas AA", "Pilas AALinterna": "Linterna Cargada", "CincelCaballo": "Aluminio"}
 
 
 func _process(delta):
