@@ -25,6 +25,7 @@ Inventario="*res://Scripts/Dialogo y manejo de inventario/Inventario.gd"
 Dialogo="*res://Scripts/Dialogo y manejo de inventario/Dialogo.gd"
 Loader="*res://Scripts/Loader.gd"
 WipeTransition="*res://Transitions/WipeTransition.tscn"
+PanelC="*res://Scripts/Muebles Interactuable/Panel.gd"
 
 [display]
 

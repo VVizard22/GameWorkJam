@@ -33,6 +33,8 @@ var descripcion = {	"Linterna": "Una linterna con luz ultravioleta, pero necesit
 					"Cajonera": "No hay nada muy interesante en los cajones... pero el ultimo está cerrado.",
 					"AbrirCajon": "Ese último cajón enía una linterna, pero requiere unas pilas AA para funcionar.",
 					
+					"CodigoCuadro": "Tinta invisible, bastante creativo de su parte. FY, que significara, quizas es parte del codigo",
+					
 					"NoCombina": "No creo que esos dos vayan juntos."}
 
 

@@ -57,7 +57,7 @@ margin_bottom = 54.0
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="play_pressed"]
-[connection signal="pressed" from="HBoxContainer/Salir" to="." method="play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Salir" to="." method="_on_Salir_pressed"]
-[connection signal="pressed" from="HBoxContainer/Creditos" to="." method="play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Salir" to="." method="play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Creditos" to="." method="_on_Creditos_pressed"]
+[connection signal="pressed" from="HBoxContainer/Creditos" to="." method="play_pressed"]

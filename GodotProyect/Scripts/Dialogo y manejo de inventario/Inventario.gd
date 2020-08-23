@@ -36,10 +36,23 @@ func ValidComb(item1, item2):
 
 
 func Combine(item1, item2):
+	if item1 == "Cincel" or item2 == "Cincel":
+		durabCincel -= 1
 	for s in resultados:
 		if item1+item2 == s or item2+item1 == s:
-			Remove(item1)
-			Remove(item2)
+			if item1 == "Cincel" and durabCincel == 0:
+				Remove(item1)
+				Remove(item2)
+			elif item1 == "Cincel" and durabCincel != 0:
+				Remove(item2)
+			elif item2 == "Cincel" and durabCincel == 0:
+				Remove(item1)
+				Remove(item2)
+			elif item2 == "Cincel" and durabCincel != 0:
+				Remove(item1)
+			else:
+				Remove(item1)
+				Remove(item2)
 			
 			added_item(resultados[s], ResourceLoader.load("res://Sprites/Objetos/"+ resultados[s]+ ".png"))
 			

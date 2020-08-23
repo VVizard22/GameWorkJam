@@ -4,9 +4,6 @@ var letter = "A"
 
 func _ready():
 	self.text = letter
-	
-
-
 
 func _on_LetterUpTwo_pressed():
 	if not letter == "Z":

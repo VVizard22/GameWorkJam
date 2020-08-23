@@ -46,8 +46,7 @@ func _input(event):
 	if hover and event.is_action_pressed("right_click"):
 		Dialogo.get_topic(name)
 		if name == "Anotaciones":
-			pass
-			#Añadir página marcada que lleve a escena donde solo se ve la página
+			self.get_parent().get_parent().get_parent().get_parent().get_parent().get_node("Anotaciones").visible = true
 	
 	elif hover and event.is_action_pressed("left_click"):
 		Inventario.currentlyUsing = name
