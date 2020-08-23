@@ -1,6 +1,7 @@
 extends Label
 
 var letter = "A"
+signal let2
 
 func _ready():
 	self.text = letter
@@ -11,6 +12,7 @@ func _on_LetterUpTwo_pressed():
 	elif letter == "Z":
 		letter = "A"
 	self.text = letter
+	emit_signal("let2", letter)
 
 
 func _on_LetterDownTwo_pressed():
@@ -19,3 +21,4 @@ func _on_LetterDownTwo_pressed():
 	elif letter == "A":
 		letter = "Z"
 	self.text = letter
+	emit_signal("let2", letter)

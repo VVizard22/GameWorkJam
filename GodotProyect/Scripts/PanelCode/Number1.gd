@@ -1,6 +1,7 @@
 extends Label
 
 var number = "0"
+signal num1
 
 func _ready():
 	self.text = number
@@ -12,6 +13,7 @@ func _on_NumberUpOne_pressed():
 	elif number == "9":
 		number = "0"
 	self.text = number
+	emit_signal("num1", number)
 
 
 func _on_NumberDownOne_pressed():
