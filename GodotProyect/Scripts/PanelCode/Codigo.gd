@@ -31,4 +31,6 @@ func getNum2(number):
 
 func verCode():
 	if actualCode == PanelC.codigo:
-		print_debug("Saliste Wachin")
+		get_node("Check").texture = load("res://Sprites/Panel/Tick-panel.png")
+	else:
+		get_node("Check").texture = load("res://Sprites/Panel/Cruz-panel.png")

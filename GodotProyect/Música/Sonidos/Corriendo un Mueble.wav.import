@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Corriendo un Mueble.wav-7b5f71d4f0a8617913f6d7cc7e3e856b.sample"
+
+[deps]
+
+source_file="res://Música/Sonidos/Corriendo un Mueble.wav"
+dest_files=[ "res://.import/Corriendo un Mueble.wav-7b5f71d4f0a8617913f6d7cc7e3e856b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

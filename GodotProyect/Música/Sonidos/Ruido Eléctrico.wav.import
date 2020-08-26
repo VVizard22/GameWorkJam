@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ruido Eléctrico.wav-271c8b7a1bd5f02892db69112d7501ad.sample"
+
+[deps]
+
+source_file="res://Música/Sonidos/Ruido Eléctrico.wav"
+dest_files=[ "res://.import/Ruido Eléctrico.wav-271c8b7a1bd5f02892db69112d7501ad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

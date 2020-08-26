@@ -3,11 +3,11 @@ extends Node
 var currentScene
 onready var wipeTransition = WipeTransition.get_node("AnimationPlayer")
 var escenas = {
-	"ArtRoom": "res://Scenes/Juego Como Tal/SalaDeArte.tscn",
-	"Menu": "res://Menu/MainMenu.tscn",
+	"ArtRoom": "res://Scenes/Juego/SalaDeArte.tscn",
+	"Menu": "res://Scenes/Menu/MainMenu.tscn",
 	"Opciones": "",
-	"Tutorial": "res://Scenes/Juego Como Tal/Tutorial.tscn",
-	"Panel": "res://Scenes/Juego Como Tal/Panel.tscn",
+	"Tutorial": "res://Scenes/Juego/Tutorial.tscn",
+	"Panel": "res://Scenes/Juego/Panel.tscn",
 	"PauseMenu": ""
 }
 

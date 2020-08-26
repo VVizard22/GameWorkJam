@@ -28,7 +28,7 @@ tracks/0/keys = {
 [node name="Typewriter_effect" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
-margin_right = 1816.0
+margin_right = 1678.0
 margin_bottom = 64.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {

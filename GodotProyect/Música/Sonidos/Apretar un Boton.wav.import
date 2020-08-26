@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Apretar un Boton.wav-374fddf4b2f6e90ffa55872e3f669c9f.sample"
+
+[deps]
+
+source_file="res://Música/Sonidos/Apretar un Boton.wav"
+dest_files=[ "res://.import/Apretar un Boton.wav-374fddf4b2f6e90ffa55872e3f669c9f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

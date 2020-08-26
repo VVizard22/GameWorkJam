@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/InventoryManager.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Juego Como Tal/Anotaciones.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Juego/Anotaciones.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Dialogo y manejo de inventario/DragDrop1.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Inventario/Ayuda.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/Botones/boton-ayuda.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Botones/boton-cruz.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Botones/boton-salir.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Botones/ayuda-indicaciones.png" type="Texture" id=8]
+
 
 [node name="Inventario" type="Control"]
 anchor_top = 1.0
@@ -16,6 +22,8 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 1.41425
+margin_bottom = 1.41425
 color = Color( 0, 0, 0, 0.168627 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -24,10 +32,10 @@ __meta__ = {
 [node name="GridContainer" type="GridContainer" parent="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 32.0
-margin_top = 16.0
-margin_right = -32.0
-margin_bottom = -16.0
+margin_left = 38.0
+margin_top = 14.1122
+margin_right = -26.0
+margin_bottom = -17.8878
 custom_constants/hseparation = 83
 columns = 9
 script = ExtResource( 1 )
@@ -160,6 +168,68 @@ margin_right = 60.0
 margin_bottom = 45.0
 script = ExtResource( 3 )
 
+[node name="Ayuda" type="Control" parent="ColorRect"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ayuda" type="TextureRect" parent="ColorRect/Ayuda"]
+margin_left = 1245.01
+margin_top = -469.337
+margin_right = 1579.01
+margin_bottom = -27.3368
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="ColorRect/Ayuda"]
+margin_left = 1259.13
+margin_top = -415.305
+margin_right = 1299.13
+margin_bottom = -375.305
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Botones" type="Control" parent="ColorRect"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 474.057, -465.458 )
+
+[node name="Ayuda" type="TextureButton" parent="ColorRect/Botones"]
+margin_left = 1256.0
+margin_top = 14.1122
+margin_right = 1376.0
+margin_bottom = 104.112
+rect_min_size = Vector2( 120, 90 )
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Salir" type="TextureButton" parent="ColorRect/Botones"]
+margin_left = 1459.0
+margin_top = 14.1122
+margin_right = 1579.0
+margin_bottom = 104.112
+rect_min_size = Vector2( 120, 90 )
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Anotaciones" parent="." instance=ExtResource( 2 )]
 visible = false
 anchor_top = -5.14
@@ -177,3 +247,6 @@ margin_right = 2.0
 [connection signal="mouse_exited" from="ColorRect/GridContainer/ColorRect5/CenterContainer/Slot" to="ColorRect/GridContainer/ColorRect5/CenterContainer/Slot" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="ColorRect/GridContainer/ColorRect6/CenterContainer/Slot" to="ColorRect/GridContainer/ColorRect6/CenterContainer/Slot" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ColorRect/GridContainer/ColorRect6/CenterContainer/Slot" to="ColorRect/GridContainer/ColorRect6/CenterContainer/Slot" method="_on_mouse_exited"]
+[connection signal="pressed" from="ColorRect/Ayuda/TextureButton" to="ColorRect/Ayuda" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="ColorRect/Botones/Ayuda" to="ColorRect/Ayuda" method="_on_Ayuda_pressed"]
+[connection signal="pressed" from="ColorRect/Botones/Salir" to="ColorRect/Ayuda" method="_on_Salir_pressed"]
