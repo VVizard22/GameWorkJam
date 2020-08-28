@@ -224,10 +224,10 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 1325.63
-margin_top = 20.5407
-margin_right = 1389.63
-margin_bottom = 84.5407
+margin_left = 1336.96
+margin_top = 65.8466
+margin_right = 1400.96
+margin_bottom = 129.847
 texture_normal = ExtResource( 11 )
 expand = true
 stretch_mode = 5

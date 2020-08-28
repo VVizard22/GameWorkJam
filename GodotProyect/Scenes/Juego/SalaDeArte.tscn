@@ -60,21 +60,21 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 47 ) ],
-"loop": false,
-"name": "Cajones",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 46 ) ],
 "loop": true,
 "name": "Trabado",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 47 ) ],
+"loop": false,
+"name": "Cajones",
+"speed": 1.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 126.426, 107.967 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
@@ -87,23 +87,23 @@ animations = [ {
 "speed": 14.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 42.2836, 41.1497 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 14.0978, 17.7144 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 204.825, 54.6068 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 17.2815, 19.8676 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 71.3209, 70.8578 )
 
 [sub_resource type="RectangleShape2D" id=12]
@@ -152,7 +152,7 @@ script = ExtResource( 7 )
 
 [node name="Biblioteca" type="AnimatedSprite" parent="Items"]
 position = Vector2( 1051, 365 )
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 animation = "Idle"
 playing = true
 
@@ -163,7 +163,7 @@ neededItem = "Libro"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Biblioteca/Area2D"]
 scale = Vector2( 19.142, 11.1 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Light2D" type="Light2D" parent="Items/Biblioteca"]
 enabled = false
@@ -180,7 +180,7 @@ script = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Panel/Area2D"]
 scale = Vector2( 1.936, 3.636 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Light2D" type="Light2D" parent="Items/Panel"]
 enabled = false
@@ -194,7 +194,7 @@ scale = Vector2( 0.692308, 0.723781 )
 texture = ExtResource( 40 )
 
 [node name="CollisionShape2D" parent="Items/Caballo/Area2D" index="0"]
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="Puerta" type="Sprite" parent="Items"]
 position = Vector2( 1592, 358 )
@@ -205,7 +205,7 @@ script = ExtResource( 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Puerta/Area2D"]
 scale = Vector2( 4.319, 33.159 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Light2D" type="Light2D" parent="Items/Puerta"]
 enabled = false
@@ -223,7 +223,7 @@ script = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Escultura/Area2D"]
 scale = Vector2( 4.075, 8.61 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="Light2D" type="Light2D" parent="Items/Escultura"]
 enabled = false
@@ -236,7 +236,7 @@ position = Vector2( 1010.32, 673.506 )
 texture = ExtResource( 43 )
 
 [node name="CollisionShape2D" parent="Items/Llave/Area2D" index="0"]
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="Alfombra" parent="Items" instance=ExtResource( 4 )]
 position = Vector2( 1152.62, 655.52 )
@@ -247,7 +247,7 @@ script = ExtResource( 44 )
 
 [node name="CollisionShape2D" parent="Items/Alfombra/Area2D" index="0"]
 position = Vector2( 1.41577, 2.8316 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="Pava" parent="Items" instance=ExtResource( 4 )]
 position = Vector2( 93.1304, 283.406 )
@@ -255,7 +255,7 @@ scale = Vector2( 1.76517, 1.49097 )
 texture = ExtResource( 48 )
 
 [node name="CollisionShape2D" parent="Items/Pava/Area2D" index="0"]
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="Cuadro" type="Sprite" parent="Items"]
 position = Vector2( 649.385, 347.345 )
@@ -267,7 +267,7 @@ neededItem = "Linterna Cargada"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Cuadro/Area2D"]
 position = Vector2( -1.58923, -68.3354 )
-shape = SubResource( 15 )
+shape = SubResource( 11 )
 
 [node name="Light2D" type="Light2D" parent="Items/Cuadro"]
 position = Vector2( -2.1189, -69.3948 )
@@ -287,16 +287,13 @@ navpoly = SubResource( 13 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
 position = Vector2( 1016, 640 )
-frame = 13
+frame = 27
 
 [node name="CollisionShape2D" parent="NavMesh/Character/Area2D" index="0"]
 position = Vector2( -184.67, -2180.24 )
 shape = SubResource( 14 )
 
 [node name="Inventario" parent="." instance=ExtResource( 5 )]
-
-[node name="Typewriter_effect" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2.1423, 3.77548 )
 
 [node name="FirstTimeText" type="Node" parent="."]
 script = ExtResource( 38 )
@@ -311,6 +308,9 @@ visible = false
 
 [node name="Mono Liso" parent="Zoom" instance=ExtResource( 49 )]
 visible = false
+
+[node name="Typewriter_effect" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2.1423, 3.77548 )
 [connection signal="mouse_entered" from="Items/Cajonera/Area2D" to="Items/Cajonera/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Items/Cajonera/Area2D" to="Items/Cajonera/Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_entered"]
