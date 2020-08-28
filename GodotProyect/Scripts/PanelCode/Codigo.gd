@@ -32,5 +32,7 @@ func getNum2(number):
 func verCode():
 	if actualCode == PanelC.codigo:
 		get_node("Check").texture = load("res://Sprites/Panel/Tick-panel.png")
+		yield(get_tree().create_timer(1), "timeout")
+		Loader._changeScene("Final", "Wipe")
 	else:
 		get_node("Check").texture = load("res://Sprites/Panel/Cruz-panel.png")

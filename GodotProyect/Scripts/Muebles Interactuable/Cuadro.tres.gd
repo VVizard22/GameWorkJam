@@ -10,7 +10,7 @@ func _process(delta):
 		var areas = self.get_overlapping_areas()
 		for s in areas:
 			if s.get_parent().is_in_group("Player"):
-				Inventario.Remove(neededItem)
+				self.get_parent().get_parent().get_parent().get_node("Zoom/Mono Liso Iluminado").visible = true
 				Dialogo.get_topic("CodigoCuadro")
 				active = false
 	
@@ -24,6 +24,7 @@ func _on_mouse_exited():
 func _input(event):
 	if hover and event.is_action_pressed("right_click"):
 		Dialogo.get_topic("Cuadro")
+		self.get_parent().get_parent().get_parent().get_node("Zoom/Mono Liso").visible = true
 	if Input.is_action_just_released("left_click") and hover and Inventario.currentlyUsing != "":
 		if neededItem == Inventario.currentlyUsing:
 			_activate_Item()

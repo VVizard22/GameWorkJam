@@ -5,6 +5,8 @@ onready var wipeTransition = WipeTransition.get_node("AnimationPlayer")
 var escenas = {
 	"ArtRoom": "res://Scenes/Juego/SalaDeArte.tscn",
 	"Menu": "res://Scenes/Menu/MainMenu.tscn",
+	"Intro": "res://Scenes/Escenas Pieza/Intro.tscn",
+	"Final": "res://Scenes/Escenas Pieza/Final.tscn",
 	"Opciones": "",
 	"Tutorial": "res://Scenes/Juego/Tutorial.tscn",
 	"Panel": "res://Scenes/Juego/Panel.tscn",

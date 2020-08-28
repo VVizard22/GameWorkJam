@@ -2,7 +2,7 @@ extends Area2D
 
 var hover = false
 var clicked = false
-var codigo = "FY39"
+var codigo = "KS39"
 
 
 func _process(delta):

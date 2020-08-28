@@ -1,6 +1,5 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
-[ext_resource path="res://Scenes/Escenas Pieza/Interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Escenas Pieza/NavMesh.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Escenas Pieza/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Escenas Pieza/Item.tscn" type="PackedScene" id=4]
@@ -48,6 +47,8 @@
 [ext_resource path="res://Sprites/Objetos/Cajon1-abierto-cajonera.png" type="Texture" id=46]
 [ext_resource path="res://Sprites/Objetos/Cajon2-abierto-cajonera.png" type="Texture" id=47]
 [ext_resource path="res://Sprites/Objetos/Pava.png" type="Texture" id=48]
+[ext_resource path="res://Scenes/Escenas Pieza/Mono Liso.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Scenes/Escenas Pieza/Mono Liso Ilum.tscn" type="PackedScene" id=50]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.41, 19.939 )
@@ -59,22 +60,19 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 46 ) ],
-"loop": true,
-"name": "Trabado",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 47 ) ],
 "loop": false,
 "name": "Cajones",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 46 ) ],
+"loop": true,
+"name": "Trabado",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 126.426, 107.967 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 63.7164, 65.6997 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
@@ -105,10 +103,13 @@ extents = Vector2( 204.825, 54.6068 )
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 17.2815, 19.8676 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 71.3209, 70.8578 )
+
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 844.525, 328 )
 
-[sub_resource type="NavigationPolygon" id=12]
+[sub_resource type="NavigationPolygon" id=13]
 vertices = PoolVector2Array( 139.41, 765.244, 139.41, 536.827, 322.522, 536.827, 354.613, 568.918, 1789.3, 765.244, 728.387, 574.582, 903.948, 568.918, 1392.87, 572.694, 1483.49, 559.48, 1596.75, 529.276, 1509.91, 529.276 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 4, 7, 8 ), PoolIntArray( 9, 4, 8, 10 ) ]
 outlines = [ PoolVector2Array( 139.41, 536.827, 322.522, 536.827, 354.613, 568.918, 728.387, 574.582, 903.948, 568.918, 1392.87, 572.694, 1483.49, 559.48, 1509.91, 529.276, 1596.75, 529.276, 1789.3, 765.244, 139.41, 765.244 ) ]
@@ -148,19 +149,6 @@ shape = SubResource( 3 )
 enabled = false
 texture = ExtResource( 8 )
 script = ExtResource( 7 )
-
-[node name="Cuadro" parent="Items" instance=ExtResource( 1 )]
-position = Vector2( 630, 350 )
-texture = ExtResource( 10 )
-
-[node name="Area2D" parent="Items/Cuadro" index="0"]
-script = ExtResource( 14 )
-neededItem = "Linterna Cargada"
-
-[node name="CollisionShape2D" parent="Items/Cuadro/Area2D" index="0"]
-position = Vector2( -1.5, -70 )
-rotation = -0.10472
-shape = SubResource( 4 )
 
 [node name="Biblioteca" type="AnimatedSprite" parent="Items"]
 position = Vector2( 1051, 365 )
@@ -269,19 +257,37 @@ texture = ExtResource( 48 )
 [node name="CollisionShape2D" parent="Items/Pava/Area2D" index="0"]
 shape = SubResource( 11 )
 
+[node name="Cuadro" type="Sprite" parent="Items"]
+position = Vector2( 649.385, 347.345 )
+texture = ExtResource( 10 )
+
+[node name="Area2D" type="Area2D" parent="Items/Cuadro"]
+script = ExtResource( 14 )
+neededItem = "Linterna Cargada"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Cuadro/Area2D"]
+position = Vector2( -1.58923, -68.3354 )
+shape = SubResource( 15 )
+
+[node name="Light2D" type="Light2D" parent="Items/Cuadro"]
+position = Vector2( -2.1189, -69.3948 )
+texture = ExtResource( 8 )
+script = ExtResource( 7 )
+
 [node name="NavMesh" parent="." instance=ExtResource( 2 )]
 position = Vector2( -127.888, -3.05176e-05 )
 
 [node name="CollisionShape2D" parent="NavMesh/Area2D" index="0"]
 position = Vector2( 971, 360 )
-shape = SubResource( 13 )
+shape = SubResource( 12 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="NavMesh"]
-navpoly = SubResource( 12 )
+position = Vector2( -10.0908, -15.1362 )
+navpoly = SubResource( 13 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
 position = Vector2( 1016, 640 )
-frame = 56
+frame = 13
 
 [node name="CollisionShape2D" parent="NavMesh/Character/Area2D" index="0"]
 position = Vector2( -184.67, -2180.24 )
@@ -299,6 +305,12 @@ script = ExtResource( 38 )
 
 [node name="Panel" parent="Zoom" instance=ExtResource( 39 )]
 visible = false
+
+[node name="Mono Liso Iluminado" parent="Zoom" instance=ExtResource( 50 )]
+visible = false
+
+[node name="Mono Liso" parent="Zoom" instance=ExtResource( 49 )]
+visible = false
 [connection signal="mouse_entered" from="Items/Cajonera/Area2D" to="Items/Cajonera/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Items/Cajonera/Area2D" to="Items/Cajonera/Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Items/Biblioteca/Area2D" to="Items/Biblioteca/Area2D" method="_on_mouse_entered"]
@@ -309,10 +321,10 @@ visible = false
 [connection signal="mouse_exited" from="Items/Puerta/Area2D" to="Items/Puerta/Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Items/Escultura/Area2D" to="Items/Escultura/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Items/Escultura/Area2D" to="Items/Escultura/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Items/Cuadro/Area2D" to="Items/Cuadro/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Items/Cuadro/Area2D" to="Items/Cuadro/Area2D" method="_on_mouse_exited"]
 
 [editable path="Items/Libro"]
-
-[editable path="Items/Cuadro"]
 
 [editable path="Items/Caballo"]
 
