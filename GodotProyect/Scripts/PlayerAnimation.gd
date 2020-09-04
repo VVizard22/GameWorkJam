@@ -10,9 +10,21 @@ onready var timer = $Timer
 var idleTimer = 0
 
 func _ready():
+	self.get_parent().get_parent().get_node("Items/Cajonera/Area2D").connect("romper", self, "rompCajon")
 	lastPos = self.position
 	finalPos = self.position
 	currentState = "Idle"
+
+func rompCajon():
+	currentState = "RomperCajon"
+	
+func agarAbajo():
+#	currentState = "AgarrAbajo"
+	pass
+	
+func agarArriba():
+#	currentState = "AgarrArriba"
+	pass
 
 func _process(delta):
 	animation = currentState
@@ -32,11 +44,11 @@ func _process(delta):
 		idleTimer = 0
 	
 	
-	if self.position.x - finalPos.x  > 10:
+	if self.position.x - finalPos.x  > 1:
 		currentState = "WalkingLeft"
-	if self.position.x - finalPos.x  < 10 and self.position.x - finalPos.x > -10:
+	if self.position.x - finalPos.x  < 1 and self.position.x - finalPos.x > -1:
 		currentState = "Idle"
-	if self.position.x - finalPos.x < -10:
+	if self.position.x - finalPos.x < -1:
 		currentState = "WalkingRight"
 	
 	lastPosTimer += 1

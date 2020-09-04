@@ -7,6 +7,8 @@ var active = false
 var notUsed = true
 var abierto = false
 
+signal romper
+
 func _process(delta):
 	if active:
 		var areas = self.get_overlapping_areas()
@@ -15,6 +17,8 @@ func _process(delta):
 				Inventario.durabCincel -= 1
 				if Inventario.durabCincel == 0:
 					Inventario.Remove(neededItem)
+				emit_signal("romper")
+				yield(get_tree().create_timer(1.75), "timeout")
 				self.get_parent().play("Trabado")
 				Inventario.added_item("Linterna", ResourceLoader.load("res://Sprites/Objetos/Linterna.png"))
 				Dialogo.get_topic("AbrirCajon")

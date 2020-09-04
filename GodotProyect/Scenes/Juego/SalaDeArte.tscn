@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Scenes/Escenas Pieza/NavMesh.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Escenas Pieza/Player.tscn" type="PackedScene" id=3]
@@ -113,9 +113,6 @@ extents = Vector2( 844.525, 328 )
 vertices = PoolVector2Array( 139.41, 765.244, 139.41, 536.827, 322.522, 536.827, 354.613, 568.918, 1789.3, 765.244, 728.387, 574.582, 903.948, 568.918, 1392.87, 572.694, 1483.49, 559.48, 1596.75, 529.276, 1509.91, 529.276 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 4, 7, 8 ), PoolIntArray( 9, 4, 8, 10 ) ]
 outlines = [ PoolVector2Array( 139.41, 536.827, 322.522, 536.827, 354.613, 568.918, 728.387, 574.582, 903.948, 568.918, 1392.87, 572.694, 1483.49, 559.48, 1509.91, 529.276, 1596.75, 529.276, 1789.3, 765.244, 139.41, 765.244 ) ]
-
-[sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 854.456, 2470.1 )
 
 [node name="Main" type="Node"]
 
@@ -286,12 +283,8 @@ position = Vector2( -10.0908, -15.1362 )
 navpoly = SubResource( 13 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
-position = Vector2( 1016, 640 )
-frame = 27
-
-[node name="CollisionShape2D" parent="NavMesh/Character/Area2D" index="0"]
-position = Vector2( -184.67, -2180.24 )
-shape = SubResource( 14 )
+position = Vector2( 986.803, 600.721 )
+frame = 16
 
 [node name="Inventario" parent="." instance=ExtResource( 5 )]
 
