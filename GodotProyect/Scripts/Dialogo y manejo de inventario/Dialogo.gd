@@ -6,7 +6,7 @@ signal ayuda
 
 var primeraVezSala = true
 
-var random = ["1","2","3","4"]
+var random = ["Encerrado otra vez, tengo que ser mas cuidadoso si quiero que esto deje de pasar","Por que alguien tendria una pava ahi","Si no salgo rapido tendre que buscar algo comestible aqui dentro","Por lo menos mi captor es alguien limpio"]
 var descripcion = {	"Linterna": "Una linterna con luz ultravioleta, pero necesita unas pilas AA para funcionar.",
 					"Pilas AAA": "Unas simples pilas AAA.",
 					"Aluminio": "Me pregunto que podre hacer con papel metalico.",
@@ -33,7 +33,7 @@ var descripcion = {	"Linterna": "Una linterna con luz ultravioleta, pero necesit
 					"Cajonera": "No hay nada muy interesante en los cajones... pero el ultimo está cerrado.",
 					"AbrirCajon": "Ese último cajón enía una linterna, pero requiere unas pilas AA para funcionar.",
 					
-					"CodigoCuadro": "Tinta invisible, bastante creativo de su parte. FY, que significara, quizas es parte del codigo",
+					"CodigoCuadro": "Tinta invisible, bastante creativo de su parte. KS, que significara, quizas es parte del codigo",
 					
 					"NoCombina": "No creo que esos dos vayan juntos."}
 

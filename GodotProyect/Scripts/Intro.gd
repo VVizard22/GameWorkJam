@@ -5,7 +5,6 @@ func _ready():
 	var intro = get_node("Intro")
 	intro.play("Paginas")
 	cFrame = intro.get_frame()
-	print_debug(cFrame)
 
 func _on_TextureButton_pressed():
 	Loader._changeScene("Tutorial", "Wipe")
