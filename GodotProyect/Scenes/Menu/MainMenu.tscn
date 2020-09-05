@@ -64,6 +64,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 9 )
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="play_pressed"]
-[connection signal="pressed" from="HBoxContainer/Salir" to="." method="play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="HBoxContainer/Salir" to="." method="play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Creditos" to="." method="_on_Creditos_pressed"]

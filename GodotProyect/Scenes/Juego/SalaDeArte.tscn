@@ -1,5 +1,6 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
+[ext_resource path="res://Scenes/Escenas Pieza/GetArea2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Escenas Pieza/NavMesh.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Escenas Pieza/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Escenas Pieza/Item.tscn" type="PackedScene" id=4]
@@ -122,9 +123,12 @@ texture = ExtResource( 11 )
 
 [node name="Items" type="Node" parent="."]
 
-[node name="Libro" parent="Items" instance=ExtResource( 4 )]
+[node name="Libro" parent="Items" groups=[
+"Abajo",
+] instance=ExtResource( 4 )]
 position = Vector2( 333, 608 )
 texture = ExtResource( 19 )
+script = ExtResource( 1 )
 
 [node name="CollisionShape2D" parent="Items/Libro/Area2D" index="0"]
 shape = SubResource( 1 )
@@ -147,11 +151,14 @@ enabled = false
 texture = ExtResource( 8 )
 script = ExtResource( 7 )
 
-[node name="Biblioteca" type="AnimatedSprite" parent="Items"]
+[node name="Biblioteca" type="AnimatedSprite" parent="Items" groups=[
+"Abajo",
+]]
 position = Vector2( 1051, 365 )
 frames = SubResource( 4 )
 animation = "Idle"
 playing = true
+script = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="Items/Biblioteca"]
 position = Vector2( -6, 66 )
@@ -185,10 +192,13 @@ texture = ExtResource( 8 )
 texture_scale = 2.46
 script = ExtResource( 7 )
 
-[node name="Caballo" parent="Items" instance=ExtResource( 4 )]
+[node name="Caballo" parent="Items" groups=[
+"Arriba",
+] instance=ExtResource( 4 )]
 position = Vector2( 1170, 407.325 )
 scale = Vector2( 0.692308, 0.723781 )
 texture = ExtResource( 40 )
+script = ExtResource( 1 )
 
 [node name="CollisionShape2D" parent="Items/Caballo/Area2D" index="0"]
 shape = SubResource( 6 )
@@ -210,9 +220,12 @@ texture = ExtResource( 8 )
 texture_scale = 2.46
 script = ExtResource( 7 )
 
-[node name="Escultura" type="Sprite" parent="Items"]
+[node name="Escultura" type="Sprite" parent="Items" groups=[
+"Arriba",
+]]
 position = Vector2( 1304, 409 )
 texture = ExtResource( 9 )
+script = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="Items/Escultura"]
 position = Vector2( 4.51, -25.35 )
@@ -228,16 +241,20 @@ texture = ExtResource( 8 )
 texture_scale = 2.46
 script = ExtResource( 7 )
 
-[node name="Llave" parent="Items" instance=ExtResource( 4 )]
-position = Vector2( 1010.32, 673.506 )
+[node name="Llave" parent="Items" groups=[
+"Abajo",
+] instance=ExtResource( 4 )]
+position = Vector2( 1016.56, 628.562 )
 texture = ExtResource( 43 )
+script = ExtResource( 1 )
 
 [node name="CollisionShape2D" parent="Items/Llave/Area2D" index="0"]
 shape = SubResource( 8 )
 
 [node name="Alfombra" parent="Items" instance=ExtResource( 4 )]
-position = Vector2( 1152.62, 655.52 )
+position = Vector2( 1158.86, 610.576 )
 texture = ExtResource( 41 )
+script = ExtResource( 1 )
 
 [node name="Area2D" parent="Items/Alfombra" index="0"]
 script = ExtResource( 44 )
@@ -246,10 +263,13 @@ script = ExtResource( 44 )
 position = Vector2( 1.41577, 2.8316 )
 shape = SubResource( 9 )
 
-[node name="Pava" parent="Items" instance=ExtResource( 4 )]
+[node name="Pava" parent="Items" groups=[
+"Arriba",
+] instance=ExtResource( 4 )]
 position = Vector2( 93.1304, 283.406 )
 scale = Vector2( 1.76517, 1.49097 )
 texture = ExtResource( 48 )
+script = ExtResource( 1 )
 
 [node name="CollisionShape2D" parent="Items/Pava/Area2D" index="0"]
 shape = SubResource( 10 )
@@ -267,7 +287,8 @@ position = Vector2( -1.58923, -68.3354 )
 shape = SubResource( 11 )
 
 [node name="Light2D" type="Light2D" parent="Items/Cuadro"]
-position = Vector2( -2.1189, -69.3948 )
+position = Vector2( 3.2265, -64.0494 )
+enabled = false
 texture = ExtResource( 8 )
 script = ExtResource( 7 )
 
@@ -279,12 +300,12 @@ position = Vector2( 971, 360 )
 shape = SubResource( 12 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="NavMesh"]
-position = Vector2( -10.0908, -15.1362 )
+position = Vector2( 4.9092, -1.1362 )
 navpoly = SubResource( 13 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
 position = Vector2( 986.803, 600.721 )
-frame = 16
+frame = 56
 
 [node name="Inventario" parent="." instance=ExtResource( 5 )]
 

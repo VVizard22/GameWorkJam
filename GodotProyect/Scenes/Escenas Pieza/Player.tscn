@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=2]
+[gd_scene load_steps=183 format=2]
 
 [ext_resource path="res://Sprites/Animaciones/Idle/zack-respirando_00009.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Animaciones/Caminata - izquierda/zack-izquierda-01.png" type="Texture" id=2]
@@ -116,6 +116,70 @@
 [ext_resource path="res://Sprites/Animaciones/Rompiendo cajon/zack-conmartillo_00013.png" type="Texture" id=114]
 [ext_resource path="res://Sprites/Animaciones/Rompiendo cajon/zack-conmartillo_00017.png" type="Texture" id=115]
 [ext_resource path="res://Sprites/Animaciones/Rompiendo cajon/zack-conmartillo_00005.png" type="Texture" id=116]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00022.png" type="Texture" id=117]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00010.png" type="Texture" id=118]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00011.png" type="Texture" id=119]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00014.png" type="Texture" id=120]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00020.png" type="Texture" id=121]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00019.png" type="Texture" id=122]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00023.png" type="Texture" id=123]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00024.png" type="Texture" id=124]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00007.png" type="Texture" id=125]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00001.png" type="Texture" id=126]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00021.png" type="Texture" id=127]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00004.png" type="Texture" id=128]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00009.png" type="Texture" id=129]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00005.png" type="Texture" id=130]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00012.png" type="Texture" id=131]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00015.png" type="Texture" id=132]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00016.png" type="Texture" id=133]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00000.png" type="Texture" id=134]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00002.png" type="Texture" id=135]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00003.png" type="Texture" id=136]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00006.png" type="Texture" id=137]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00008.png" type="Texture" id=138]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00017.png" type="Texture" id=139]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00013.png" type="Texture" id=140]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00018.png" type="Texture" id=141]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00034.png" type="Texture" id=142]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00030.png" type="Texture" id=143]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00025.png" type="Texture" id=144]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00027.png" type="Texture" id=145]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00028.png" type="Texture" id=146]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00035.png" type="Texture" id=147]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00036.png" type="Texture" id=148]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00037.png" type="Texture" id=149]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00026.png" type="Texture" id=150]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00029.png" type="Texture" id=151]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00032.png" type="Texture" id=152]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00031.png" type="Texture" id=153]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Abajo/zack-derecha-parafter_00033.png" type="Texture" id=154]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00024.png" type="Texture" id=155]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00025.png" type="Texture" id=156]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00010.png" type="Texture" id=157]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00013.png" type="Texture" id=158]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00016.png" type="Texture" id=159]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00017.png" type="Texture" id=160]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00020.png" type="Texture" id=161]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00021.png" type="Texture" id=162]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00019.png" type="Texture" id=163]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00015.png" type="Texture" id=164]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00022.png" type="Texture" id=165]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00014.png" type="Texture" id=166]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00012.png" type="Texture" id=167]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00023.png" type="Texture" id=168]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00011.png" type="Texture" id=169]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00018.png" type="Texture" id=170]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00007.png" type="Texture" id=171]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00008.png" type="Texture" id=172]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00000.png" type="Texture" id=173]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00004.png" type="Texture" id=174]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00006.png" type="Texture" id=175]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00009.png" type="Texture" id=176]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00001.png" type="Texture" id=177]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00002.png" type="Texture" id=178]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00003.png" type="Texture" id=179]
+[ext_resource path="res://Sprites/Animaciones/Agarrar Arriba/objetos-medio00005.png" type="Texture" id=180]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -138,6 +202,16 @@ animations = [ {
 "loop": false,
 "name": "RomperCajon",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 134 ), ExtResource( 126 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 128 ), ExtResource( 130 ), ExtResource( 137 ), ExtResource( 125 ), ExtResource( 138 ), ExtResource( 129 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 131 ), ExtResource( 140 ), ExtResource( 120 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 139 ), ExtResource( 141 ), ExtResource( 122 ), ExtResource( 121 ), ExtResource( 127 ), ExtResource( 117 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 144 ), ExtResource( 150 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 151 ), ExtResource( 143 ), ExtResource( 153 ), ExtResource( 152 ), ExtResource( 154 ), ExtResource( 142 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ) ],
+"loop": false,
+"name": "Agarrar Abajo",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 173 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 174 ), ExtResource( 180 ), ExtResource( 175 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 176 ), ExtResource( 157 ), ExtResource( 169 ), ExtResource( 167 ), ExtResource( 158 ), ExtResource( 166 ), ExtResource( 164 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 170 ), ExtResource( 163 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 165 ), ExtResource( 168 ), ExtResource( 155 ), ExtResource( 156 ) ],
+"loop": false,
+"name": "Agarrar Arriba",
+"speed": 15.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -149,7 +223,7 @@ extents = Vector2( 782.609, 2285.71 )
 position = Vector2( 8, 224 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 49
+frame = 14
 playing = true
 offset = Vector2( -8, -224 )
 script = ExtResource( 16 )

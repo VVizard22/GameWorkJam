@@ -28,11 +28,14 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 1271.26
-margin_top = 14.1225
-margin_right = 1335.26
-margin_bottom = 78.1221
+margin_left = 1276.92
+margin_top = 78.3059
+margin_right = 1340.92
+margin_bottom = 142.306
 texture_normal = ExtResource( 3 )
 expand = true
 stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

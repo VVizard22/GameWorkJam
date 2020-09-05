@@ -4,11 +4,18 @@ var hover = false
 var clicked = false
 var oneTime = true
 
+signal agarrarAbajo
+signal agarrarArriba
+
 func _process(delta):
 	if clicked and oneTime:
 		var areas = self.get_overlapping_areas()
 		for s in areas:
 			if s.get_parent().is_in_group("Player"):
+				if self.get_parent().is_in_group("Abajo"):
+					emit_signal("agarrarAbajo")
+				if self.get_parent().is_in_group("Arriba"):
+					emit_signal("agarrarArriba")
 				Inventario.added_item("Cincel", ResourceLoader.load("res://Sprites/Objetos/Cincel.png"))
 				Dialogo.get_topic("Cincel")
 				oneTime = false

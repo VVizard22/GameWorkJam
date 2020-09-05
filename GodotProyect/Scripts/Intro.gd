@@ -1,46 +1,36 @@
 extends Control
+var cFrame = 0
 
 func _ready():
 	var intro = get_node("Intro")
-	intro.play("1")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans1")
-	yield(get_tree().create_timer(.6), "timeout")
-	intro.play("2")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans2")
-	yield(get_tree().create_timer(.6), "timeout")
-	intro.play("3")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans3")
-	yield(get_tree().create_timer(.6), "timeout")
-	intro.play("4")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans4")
-	yield(get_tree().create_timer(.6), "timeout")
-	intro.play("5")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans5")
-	yield(get_tree().create_timer(.6), "timeout")
-	intro.play("6")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans6")
-	yield(get_tree().create_timer(.6), "timeout")
-	intro.play("7")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans7")
-	yield(get_tree().create_timer(.6), "timeout")
-	intro.play("8")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans8")
-	yield(get_tree().create_timer(.6), "timeout")
-	intro.play("9")
-	yield(get_tree().create_timer(4), "timeout")
-	intro.play("Trans9")
-	yield(get_tree().create_timer(.6), "timeout")
-	
-	Loader._changeScene("Tutorial", "Wipe")
-
+	intro.play("Paginas")
+	cFrame = intro.get_frame()
+	print_debug(cFrame)
 
 func _on_TextureButton_pressed():
 	Loader._changeScene("Tutorial", "Wipe")
+
+
+func _on_Atras_pressed():
+	var intro = get_node("Intro")
+	if cFrame != 0:
+		intro.play("T" + str(cFrame), true)
+		yield(get_tree().create_timer(1.2), "timeout")
+		intro.play("Paginas")
+		intro.set_frame(cFrame - 1)
+	cFrame = intro.get_frame()
+	
+
+
+func _on_Adelante_pressed():
+	var intro = get_node("Intro")
+	if cFrame != 8:
+		intro.play("T" + str(cFrame + 1))
+		yield(get_tree().create_timer(1.2), "timeout")
+		intro.play("Paginas")
+		intro.set_frame(cFrame + 1)
+	elif cFrame == 8:
+		intro.play("T9")
+		yield(get_tree().create_timer(1), "timeout")
+		Loader._changeScene("Tutorial", "Wipe")
+	cFrame = intro.get_frame()

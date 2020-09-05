@@ -9,7 +9,6 @@
 [ext_resource path="res://Sprites/Botones/boton-salir.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Botones/ayuda-indicaciones.png" type="Texture" id=8]
 
-
 [node name="Inventario" type="Control"]
 anchor_top = 1.0
 anchor_right = 1.0

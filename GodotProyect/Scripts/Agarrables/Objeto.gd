@@ -5,7 +5,8 @@ onready var textura = self.get_parent().texture
 
 export(String) var description
 
-signal agarrar
+signal agarrarAbajo
+signal agarrarArriba
 
 var clicked = false
 var hover = false
@@ -21,7 +22,10 @@ func _process(delta):
 		var areas = self.get_overlapping_areas()
 		for s in areas:
 			if s.get_parent().is_in_group("Player"):
-				emit_signal("agarrar")
+				if self.get_parent().is_in_group("Abajo"):
+					emit_signal("agarrarAbajo")
+				if self.get_parent().is_in_group("Arriba"):
+					emit_signal("agarrarArriba")
 				Inventario.added_item(nombre, textura)
 				self.get_parent().queue_free()
 
@@ -30,3 +34,4 @@ func _input(event):
 		clicked = true
 	if hover and event.is_action_pressed("right_click"):
 		Dialogo.get_topic(get_parent().name)
+

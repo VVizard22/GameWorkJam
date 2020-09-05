@@ -5,11 +5,18 @@ export(String) var neededItem
 var hover = false
 var active = false
 
+signal agarrarAbajo
+signal agarrarArriba
+
 func _process(delta):
 	if active:
 		var areas = self.get_overlapping_areas()
 		for s in areas:
 			if s.get_parent().is_in_group("Player"):
+				if self.get_parent().is_in_group("Abajo"):
+					emit_signal("agarrarAbajo")
+				if self.get_parent().is_in_group("Arriba"):
+					emit_signal("agarrarArriba")
 				Inventario.Remove(neededItem)
 				self.get_parent().animation = "Compartimiento"
 				yield(get_tree().create_timer(1), "timeout")
