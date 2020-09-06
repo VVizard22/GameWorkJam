@@ -13,6 +13,7 @@ func _on_Atras_pressed():
 	var final = get_node("Final")
 	if cFrame != 0:
 		final.play("T" + str(cFrame), true)
+		AudioController.Play("Paginas")
 		yield(get_tree().create_timer(1), "timeout")
 		final.play("Paginas")
 		final.set_frame(cFrame - 1)
@@ -22,6 +23,7 @@ func _on_Adelante_pressed():
 	var final = get_node("Final")
 	if cFrame != 2:
 		final.play("T" + str(cFrame + 1))
+		AudioController.Play("Paginas")
 		yield(get_tree().create_timer(1), "timeout")
 		final.play("Paginas")
 		final.set_frame(cFrame + 1)

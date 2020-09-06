@@ -14,9 +14,6 @@ func _process(delta):
 		var areas = self.get_overlapping_areas()
 		for s in areas:
 			if s.get_parent().is_in_group("Player") and notUsed:
-				Inventario.durabCincel -= 1
-				if Inventario.durabCincel == 0:
-					Inventario.Remove(neededItem)
 				emit_signal("romper")
 				yield(get_tree().create_timer(1.75), "timeout")
 				self.get_parent().play("Trabado")

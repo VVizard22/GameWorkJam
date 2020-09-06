@@ -29,24 +29,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 23 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 10 ) ],
-"loop": false,
-"name": "Paginas",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 20 ) ],
 "loop": false,
 "name": "T8",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": false,
-"name": "T9",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 21 ) ],
-"loop": false,
-"name": "T5",
 "speed": 1.0
 }, {
 "frames": [ ExtResource( 27 ) ],
@@ -54,19 +39,29 @@ animations = [ {
 "name": "T4",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 25 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 22 ) ],
 "loop": false,
-"name": "T2",
+"name": "T1",
 "speed": 2.5
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "T7",
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 9 ) ],
 "loop": false,
 "name": "T3",
 "speed": 2.5
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": false,
-"name": "T1",
+"name": "T9",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "T2",
 "speed": 2.5
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -74,10 +69,15 @@ animations = [ {
 "name": "T6",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 21 ) ],
 "loop": false,
-"name": "T7",
+"name": "T5",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 23 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "Paginas",
+"speed": 0.0
 } ]
 
 [node name="Intro" type="Control"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/AudioController.gd" type="Script" id=1]
 [ext_resource path="res://Música/Canciones/Jack.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Música/Canciones/Intro.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Música/Sonidos/step.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Música/Sonidos/Agarrar un Papel.wav" type="AudioStream" id=5]
+[ext_resource path="res://Música/Sonidos/Ruido Eléctrico.wav" type="AudioStream" id=6]
 
 [node name="Controller" type="Node"]
 script = ExtResource( 1 )
@@ -18,3 +20,11 @@ volume_db = -15.0
 
 [node name="Steps" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[node name="Paginas" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="PuertaAbierta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 2.02
+pitch_scale = 1.5

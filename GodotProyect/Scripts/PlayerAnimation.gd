@@ -26,15 +26,18 @@ func _ready():
 
 func rompCajon():
 	currentState = "RomperCajon"
+	AudioController.SfxStop()
 	
 func agarAbajo():
 	currentState = "Agarrar Abajo"
+	AudioController.SfxStop()
 	stop = true
 	yield(get_tree().create_timer(2), "timeout")
 	stop = false
 
 func agarArriba():
 	currentState = "Agarrar Arriba"
+	AudioController.SfxStop()
 	stop = true
 	yield(get_tree().create_timer(1.8), "timeout")
 	stop = false

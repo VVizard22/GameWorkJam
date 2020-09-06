@@ -7,7 +7,7 @@ var onViewport = false
 var charSpeed = 400
 
 
-var durabCincel = 2
+var durabCincel = 1
 var currentlyUsing = ""
 
 var inventario = {}

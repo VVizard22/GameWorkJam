@@ -47,6 +47,7 @@ func _input(event):
 		Dialogo.get_topic(name)
 		if name == "Anotaciones":
 			self.get_parent().get_parent().get_parent().get_parent().get_parent().get_node("Anotaciones").visible = true
+			AudioController.Play("Paginas")
 	
 	elif hover and event.is_action_pressed("left_click"):
 		Inventario.currentlyUsing = name
