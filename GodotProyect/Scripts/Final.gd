@@ -3,6 +3,7 @@ extends Control
 var cFrame = 0
 
 func _ready():
+	AudioController.Play("Intro")
 	var final = get_node("Final")
 	final.play("Paginas")
 	cFrame = final.get_frame()

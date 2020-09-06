@@ -6,6 +6,9 @@ var firstTime = true
 var ruedita = false
 var cuchillo = false
 var sillaParada
+
+func _ready():
+	AudioController.Play("MainSong")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	sillaParada = get_parent().get_node("Player/Area2D").standing

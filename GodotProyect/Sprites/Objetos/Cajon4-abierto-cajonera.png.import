@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cajon4-abierto-cajonera.png-ed43e891415945d13db9ec25ceb07d7e.stex"
+path="res://.import/Cajon4-abierto-cajonera.png-281ac64d5bc0f028cecf1694692492f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/cajon4-abierto-cajonera.png"
-dest_files=[ "res://.import/cajon4-abierto-cajonera.png-ed43e891415945d13db9ec25ceb07d7e.stex" ]
+source_file="res://Sprites/Objetos/Cajon4-abierto-cajonera.png"
+dest_files=[ "res://.import/Cajon4-abierto-cajonera.png-281ac64d5bc0f028cecf1694692492f1.stex" ]
 
 [params]
 

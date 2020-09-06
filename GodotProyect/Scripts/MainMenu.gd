@@ -1,6 +1,9 @@
 extends Control
 
 
+func _ready():
+	AudioController.Play("Intro")
+
 func play_pressed():
 	Loader._changeScene("Intro", "Wipe")
 

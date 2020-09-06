@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cajonera.png-cd7ae40d63b3feb10cf42e3976e3ffc3.stex"
+path="res://.import/cajonera.png-a368caf129f7170f846c48db68c29c4a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Objetos/Cajonera.png"
-dest_files=[ "res://.import/Cajonera.png-cd7ae40d63b3feb10cf42e3976e3ffc3.stex" ]
+source_file="res://Sprites/Objetos/cajonera.png"
+dest_files=[ "res://.import/cajonera.png-a368caf129f7170f846c48db68c29c4a.stex" ]
 
 [params]
 

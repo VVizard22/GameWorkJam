@@ -305,7 +305,7 @@ navpoly = SubResource( 13 )
 
 [node name="Character" parent="NavMesh" instance=ExtResource( 3 )]
 position = Vector2( 986.803, 600.721 )
-frame = 24
+frame = 33
 
 [node name="Inventario" parent="." instance=ExtResource( 5 )]
 

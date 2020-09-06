@@ -18,30 +18,30 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": false,
-"name": "Paginas",
-"speed": 0.0
+"name": "T1",
+"speed": 2.5
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": false,
 "name": "T2",
 "speed": 2.5
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": false,
-"name": "T3",
-"speed": 2.5
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": false,
-"name": "T1",
-"speed": 2.5
+"name": "Paginas",
+"speed": 0.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": false,
 "name": "Ending",
 "speed": 0.25
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "T3",
+"speed": 2.5
 } ]
 
 [node name="Final" type="Control"]

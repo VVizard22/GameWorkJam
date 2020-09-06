@@ -19,7 +19,7 @@ func _ready():
 		objs.getArea2D().connect("agarrarAbajo", self, "agarAbajo")
 	for objs in ObjetosArriba:
 		objs.getArea2D().connect("agarrarArriba", self, "agarArriba")
-		
+	
 	lastPos = self.position
 	finalPos = self.position
 	currentState = "Idle"
@@ -62,6 +62,7 @@ func _process(delta):
 			currentState = "WalkingLeft"
 		if self.position.x - finalPos.x  < 1 and self.position.x - finalPos.x > -1:
 			currentState = "Idle"
+			AudioController.SfxStop()
 		if self.position.x - finalPos.x < -1:
 			currentState = "WalkingRight"
 		

@@ -10,9 +10,11 @@ var path = []
 #Check para ver si se presiona el click izquierdo
 func _input(event):
 	if event.is_action_pressed("left_click") and canMoveToPos:
+		AudioController.SfxPlay("Steps")
 		_update_navigation_path($Character.position, get_local_mouse_position())
 	
 	if event.is_action_released("left_click") and canMoveToPos and Inventario.currentlyUsing != "":
+		AudioController.SfxPlay("Steps")
 		_update_navigation_path($Character.position, get_local_mouse_position())
 	
 

@@ -113,7 +113,6 @@ texture = ExtResource( 32 )
 position = Vector2( 831, 688 )
 frames = SubResource( 1 )
 animation = "Asleep"
-frame = 6
 playing = true
 offset = Vector2( 64, -192 )
 flip_h = true
